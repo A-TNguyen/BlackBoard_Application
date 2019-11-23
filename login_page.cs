@@ -21,5 +21,10 @@ namespace Blackboard_Application
         {
 
         }
+
+        private void login_page_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
