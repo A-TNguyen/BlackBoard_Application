@@ -24,6 +24,8 @@ namespace Blackboard_Application
 
         private void MainPageForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'blackboardDatabase.StudentInformation' table. You can move, or remove it, as needed.
+            this.studentInformationTableAdapter.Fill(this.blackboardDatabase.StudentInformation);
 
         }
 

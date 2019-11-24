@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -35,20 +36,41 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.blackboardDatabase = new Blackboard_Application.BlackboardDatabase();
+            this.blackboardDatabaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentInformationTableAdapter = new Blackboard_Application.BlackboardDatabaseTableAdapters.StudentInformationTableAdapter();
+            this.schoolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.class1MidtermDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.class2MidtermDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.class3MidtermDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.class4MidtermDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.class1FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.class2FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.class3FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.class4FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gPADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(134, 192);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(555, 774);
+            this.panel1.Size = new System.Drawing.Size(2309, 1157);
             this.panel1.TabIndex = 0;
             // 
             // button5
@@ -99,27 +121,148 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(790, 192);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.schoolIDDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.class1MidtermDataGridViewTextBoxColumn,
+            this.class2MidtermDataGridViewTextBoxColumn,
+            this.class3MidtermDataGridViewTextBoxColumn,
+            this.class4MidtermDataGridViewTextBoxColumn,
+            this.class1FinalsDataGridViewTextBoxColumn,
+            this.class2FinalsDataGridViewTextBoxColumn,
+            this.class3FinalsDataGridViewTextBoxColumn,
+            this.class4FinalsDataGridViewTextBoxColumn,
+            this.gPADataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.studentInformationBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(553, 85);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 102;
             this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(1507, 780);
+            this.dataGridView1.Size = new System.Drawing.Size(1688, 986);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // blackboardDatabase
+            // 
+            this.blackboardDatabase.DataSetName = "BlackboardDatabase";
+            this.blackboardDatabase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // blackboardDatabaseBindingSource
+            // 
+            this.blackboardDatabaseBindingSource.DataSource = this.blackboardDatabase;
+            this.blackboardDatabaseBindingSource.Position = 0;
+            // 
+            // studentInformationBindingSource
+            // 
+            this.studentInformationBindingSource.DataMember = "StudentInformation";
+            this.studentInformationBindingSource.DataSource = this.blackboardDatabase;
+            // 
+            // studentInformationTableAdapter
+            // 
+            this.studentInformationTableAdapter.ClearBeforeFill = true;
+            // 
+            // schoolIDDataGridViewTextBoxColumn
+            // 
+            this.schoolIDDataGridViewTextBoxColumn.DataPropertyName = "School ID";
+            this.schoolIDDataGridViewTextBoxColumn.HeaderText = "School ID";
+            this.schoolIDDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.schoolIDDataGridViewTextBoxColumn.Name = "schoolIDDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "first_Name";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "first_Name";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "last_Name";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "last_Name";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // class1MidtermDataGridViewTextBoxColumn
+            // 
+            this.class1MidtermDataGridViewTextBoxColumn.DataPropertyName = "Class 1 Midterm";
+            this.class1MidtermDataGridViewTextBoxColumn.HeaderText = "Class 1 Midterm";
+            this.class1MidtermDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.class1MidtermDataGridViewTextBoxColumn.Name = "class1MidtermDataGridViewTextBoxColumn";
+            // 
+            // class2MidtermDataGridViewTextBoxColumn
+            // 
+            this.class2MidtermDataGridViewTextBoxColumn.DataPropertyName = "Class 2 Midterm";
+            this.class2MidtermDataGridViewTextBoxColumn.HeaderText = "Class 2 Midterm";
+            this.class2MidtermDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.class2MidtermDataGridViewTextBoxColumn.Name = "class2MidtermDataGridViewTextBoxColumn";
+            // 
+            // class3MidtermDataGridViewTextBoxColumn
+            // 
+            this.class3MidtermDataGridViewTextBoxColumn.DataPropertyName = "Class 3 Midterm";
+            this.class3MidtermDataGridViewTextBoxColumn.HeaderText = "Class 3 Midterm";
+            this.class3MidtermDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.class3MidtermDataGridViewTextBoxColumn.Name = "class3MidtermDataGridViewTextBoxColumn";
+            // 
+            // class4MidtermDataGridViewTextBoxColumn
+            // 
+            this.class4MidtermDataGridViewTextBoxColumn.DataPropertyName = "Class 4 Midterm";
+            this.class4MidtermDataGridViewTextBoxColumn.HeaderText = "Class 4 Midterm";
+            this.class4MidtermDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.class4MidtermDataGridViewTextBoxColumn.Name = "class4MidtermDataGridViewTextBoxColumn";
+            // 
+            // class1FinalsDataGridViewTextBoxColumn
+            // 
+            this.class1FinalsDataGridViewTextBoxColumn.DataPropertyName = "Class 1 Finals";
+            this.class1FinalsDataGridViewTextBoxColumn.HeaderText = "Class 1 Finals";
+            this.class1FinalsDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.class1FinalsDataGridViewTextBoxColumn.Name = "class1FinalsDataGridViewTextBoxColumn";
+            // 
+            // class2FinalsDataGridViewTextBoxColumn
+            // 
+            this.class2FinalsDataGridViewTextBoxColumn.DataPropertyName = "Class 2 Finals";
+            this.class2FinalsDataGridViewTextBoxColumn.HeaderText = "Class 2 Finals";
+            this.class2FinalsDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.class2FinalsDataGridViewTextBoxColumn.Name = "class2FinalsDataGridViewTextBoxColumn";
+            // 
+            // class3FinalsDataGridViewTextBoxColumn
+            // 
+            this.class3FinalsDataGridViewTextBoxColumn.DataPropertyName = "Class 3 Finals";
+            this.class3FinalsDataGridViewTextBoxColumn.HeaderText = "Class 3 Finals";
+            this.class3FinalsDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.class3FinalsDataGridViewTextBoxColumn.Name = "class3FinalsDataGridViewTextBoxColumn";
+            // 
+            // class4FinalsDataGridViewTextBoxColumn
+            // 
+            this.class4FinalsDataGridViewTextBoxColumn.DataPropertyName = "Class 4 Finals";
+            this.class4FinalsDataGridViewTextBoxColumn.HeaderText = "Class 4 Finals";
+            this.class4FinalsDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.class4FinalsDataGridViewTextBoxColumn.Name = "class4FinalsDataGridViewTextBoxColumn";
+            // 
+            // gPADataGridViewTextBoxColumn
+            // 
+            this.gPADataGridViewTextBoxColumn.DataPropertyName = "GPA";
+            this.gPADataGridViewTextBoxColumn.HeaderText = "GPA";
+            this.gPADataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.gPADataGridViewTextBoxColumn.Name = "gPADataGridViewTextBoxColumn";
             // 
             // MainPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2309, 1157);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "MainPageForm";
             this.Text = "MainPageForm";
             this.Load += new System.EventHandler(this.MainPageForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,6 +275,22 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource blackboardDatabaseBindingSource;
+        private BlackboardDatabase blackboardDatabase;
+        private System.Windows.Forms.BindingSource studentInformationBindingSource;
+        private BlackboardDatabaseTableAdapters.StudentInformationTableAdapter studentInformationTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn schoolIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn class1MidtermDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn class2MidtermDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn class3MidtermDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn class4MidtermDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn class1FinalsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn class2FinalsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn class3FinalsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn class4FinalsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gPADataGridViewTextBoxColumn;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
