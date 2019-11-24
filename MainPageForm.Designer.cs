@@ -30,16 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.blackboardDatabase = new Blackboard_Application.BlackboardDatabase();
-            this.blackboardDatabaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentInformationTableAdapter = new Blackboard_Application.BlackboardDatabaseTableAdapters.StudentInformationTableAdapter();
             this.schoolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,11 +43,20 @@
             this.class3FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.class4FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gPADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.blackboardDatabase = new Blackboard_Application.BlackboardDatabase();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.blackboardDatabaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentInformationTableAdapter = new Blackboard_Application.BlackboardDatabaseTableAdapters.StudentInformationTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,52 +72,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2309, 1157);
             this.panel1.TabIndex = 0;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(72, 85);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(409, 80);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "View Student Information";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(72, 609);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(409, 80);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(72, 478);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(409, 80);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Delete Student Data";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(72, 347);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(409, 80);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Save Student Data";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(72, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(409, 80);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add New Student\r\n";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -145,25 +99,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1688, 986);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // blackboardDatabase
-            // 
-            this.blackboardDatabase.DataSetName = "BlackboardDatabase";
-            this.blackboardDatabase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // blackboardDatabaseBindingSource
-            // 
-            this.blackboardDatabaseBindingSource.DataSource = this.blackboardDatabase;
-            this.blackboardDatabaseBindingSource.Position = 0;
-            // 
-            // studentInformationBindingSource
-            // 
-            this.studentInformationBindingSource.DataMember = "StudentInformation";
-            this.studentInformationBindingSource.DataSource = this.blackboardDatabase;
-            // 
-            // studentInformationTableAdapter
-            // 
-            this.studentInformationTableAdapter.ClearBeforeFill = true;
             // 
             // schoolIDDataGridViewTextBoxColumn
             // 
@@ -249,6 +184,72 @@
             this.gPADataGridViewTextBoxColumn.MinimumWidth = 12;
             this.gPADataGridViewTextBoxColumn.Name = "gPADataGridViewTextBoxColumn";
             // 
+            // studentInformationBindingSource
+            // 
+            this.studentInformationBindingSource.DataMember = "StudentInformation";
+            this.studentInformationBindingSource.DataSource = this.blackboardDatabase;
+            // 
+            // blackboardDatabase
+            // 
+            this.blackboardDatabase.DataSetName = "BlackboardDatabase";
+            this.blackboardDatabase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(72, 85);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(409, 80);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "View Student Information";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(72, 609);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(409, 80);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Logout";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(72, 478);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(409, 80);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Delete Student Data";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(72, 347);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(409, 80);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Update Student Data";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(72, 216);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(409, 80);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add New Student\r\n";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // blackboardDatabaseBindingSource
+            // 
+            this.blackboardDatabaseBindingSource.DataSource = this.blackboardDatabase;
+            this.blackboardDatabaseBindingSource.Position = 0;
+            // 
+            // studentInformationTableAdapter
+            // 
+            this.studentInformationTableAdapter.ClearBeforeFill = true;
+            // 
             // MainPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -260,9 +261,9 @@
             this.Load += new System.EventHandler(this.MainPageForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

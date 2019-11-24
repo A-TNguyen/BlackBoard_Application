@@ -35,10 +35,16 @@ namespace Blackboard_Application
             LoginForm login = new LoginForm(); // Initialize LoginForm to a value
             login.ShowDialog(); //Enable you to go back to Login Page Form
             this.Close(); // Make sure to close out this MainPage Window
+            login.Dispose(); //Dispose the login after used
 
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

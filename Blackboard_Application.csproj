@@ -55,6 +55,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BlackboardDatabase.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Connection\InsertSQL.cs" />
     <Compile Include="Connection\SQLServerConnection.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>

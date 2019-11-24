@@ -42,32 +42,33 @@ namespace Blackboard_Application
                 mySQL += "WHERE username ='"+ loginInput.Text +"' "; //Where username is the input
                 //mySQL += "WHERE username = 'tester' ";
                 mySQL += "AND password = '"+ passwordInput.Text +"'"; //AND the password Input 
-                //mySQL += "AND password = '1'";
-                
+                                                                      //mySQL += "AND password = '1'";
 
-                DataTable userData = SQLServerConnection.executeSQL(mySQL);
-
-                if (userData.Rows.Count > 0)
+                //Using helps dispose of null connection
+                using (DataTable userData = SQLServerConnection.ExecuteSQL(mySQL)) 
                 {
-                    loginInput.Clear();
-                    passwordInput.Clear();
+                    if (userData.Rows.Count > 0)
+                    {
+                        loginInput.Clear();
+                        passwordInput.Clear();
 
-                  
 
-                    this.Hide(); // First need to hide main page
-                    MainPageForm maPage = new MainPageForm(); // Initialize LoginForm to a value
-                    maPage.ShowDialog(); //Enable you to go back to Login Page Form
-                    this.Close(); // Make sure to close out this MainPage Window
-                    this.Show();
-                    this.loginInput.Select();
 
-                }
-                else
-                {
-                    MessageBox.Show("Wrong Username or Password", "Please Try Again",
-                    MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    loginInput.Focus();
-                    loginInput.SelectAll();
+                        this.Hide(); // First need to hide main page
+                        MainPageForm maPage = new MainPageForm(); // Initialize LoginForm to a value
+                        maPage.ShowDialog(); //Enable you to go back to Login Page Form
+                        this.Close(); // Make sure to close out this MainPage Window
+                        this.Show();
+                        this.loginInput.Select();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong Username or Password", "Please Try Again",
+                        MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        loginInput.Focus();
+                        loginInput.SelectAll();
+                    }
                 }
 
             }
