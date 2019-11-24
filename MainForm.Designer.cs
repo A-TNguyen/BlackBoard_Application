@@ -1,6 +1,6 @@
 ﻿namespace Blackboard_Application
 {
-    partial class Login
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LoginSuccesful = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,7 +54,7 @@
             this.LoginSuccesful.TabIndex = 2;
             this.LoginSuccesful.Text = "Login Succesful";
             // 
-            // Login
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -63,8 +63,8 @@
             this.Controls.Add(this.LoginSuccesful);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
-            this.Name = "Login";
-            this.Text = "Login | Form";
+            this.Name = "MainForm";
+            this.Text = "Login | Success";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

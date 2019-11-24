@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Blackboard_Application
 {
-    public partial class register : Form
+    public partial class LoginForm : Form
     {
-        public register()
+        public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void login_input_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_page_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Blackboard_Application
 {
-    partial class login_page
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login_page));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.login_input = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +37,6 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.createAccount = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,6 +105,7 @@
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.SystemColors.Control;
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(666, 366);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(253, 59);
@@ -123,24 +123,14 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Welcome to Blackboard 3.0";
             // 
-            // createAccount
+            // LoginForm
             // 
-            this.createAccount.AutoSize = true;
-            this.createAccount.Font = new System.Drawing.Font("Calibri", 11.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createAccount.Location = new System.Drawing.Point(12, 857);
-            this.createAccount.Name = "createAccount";
-            this.createAccount.Size = new System.Drawing.Size(305, 46);
-            this.createAccount.TabIndex = 8;
-            this.createAccount.TabStop = true;
-            this.createAccount.Text = "Create an account";
-            // 
-            // login_page
-            // 
+            this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(1468, 912);
-            this.Controls.Add(this.createAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.loginButton);
@@ -150,7 +140,7 @@
             this.Controls.Add(this.login_input);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "login_page";
+            this.Name = "LoginForm";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.login_page_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -169,6 +159,5 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel createAccount;
     }
 }
