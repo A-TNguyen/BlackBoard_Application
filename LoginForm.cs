@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Blackboard_Application.Connection;
 
 namespace Blackboard_Application
 {
@@ -15,6 +16,7 @@ namespace Blackboard_Application
         public LoginForm()
         {
             InitializeComponent();
+            
         }
 
         private void login_input_TextChanged(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace Blackboard_Application
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-
+            loginInput.Select();
         }
     }
 }
