@@ -7,11 +7,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
+
 namespace Blackboard_Application.Connection
 {
     class SQLServerConnection
     {
-        public static string stringConnection = "Data Source=DESKTOP-F97OPVH\\ANDREWSQLEXPRESS; Intial Catalog=logindatabase; Integrated Security = True";
+        public static string stringConnection = "Data Source=DESKTOP-F97OPVH\\ANDREWSQLEXPRESS;Initial Catalog = logindatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public static DataTable executeSQL(string sql)
         {
@@ -36,8 +37,8 @@ namespace Blackboard_Application.Connection
 
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show("An error occured: " + ex.Message,
-                    "SQL Server Connection Failed to conenct",
+                System.Windows.Forms.MessageBox.Show("Error occured: " + ex.Message,
+                    "SQL Server Connection failed to connect",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dt = null;
             }

@@ -53,7 +53,7 @@
             this.loginInput.Name = "loginInput";
             this.loginInput.Size = new System.Drawing.Size(591, 61);
             this.loginInput.TabIndex = 0;
-            this.loginInput.TextChanged += new System.EventHandler(this.login_input_TextChanged);
+            this.loginInput.TextChanged += new System.EventHandler(this.Login_input_TextChanged);
             // 
             // passwordInput
             // 
@@ -120,7 +120,7 @@
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // cancelButton
             // 
@@ -135,6 +135,7 @@
             this.cancelButton.TabIndex = 6;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // label3
             // 
@@ -167,7 +168,7 @@
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.login_page_Load);
+            this.Load += new System.EventHandler(this.Login_page_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

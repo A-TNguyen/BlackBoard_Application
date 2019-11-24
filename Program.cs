@@ -16,7 +16,7 @@ namespace Blackboard_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainPageForm()); // To start the application
+            Application.Run(new LoginForm()); // To start the application
         }
     }
 }
