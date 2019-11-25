@@ -55,7 +55,7 @@ namespace Blackboard_Application
 
 
                         this.Hide(); // First need to hide main page
-                        MainPageForm maPage = new MainPageForm(); // Initialize LoginForm to a value
+                        AdminPageForm maPage = new AdminPageForm(); // Initialize LoginForm to a value
                         maPage.ShowDialog(); //Enable you to go back to Login Page Form
                         this.Close(); // Make sure to close out this MainPage Window
                         this.Show();
