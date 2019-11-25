@@ -21,8 +21,8 @@ namespace Blackboard_Application
         public SqlConnection GetsqlCon()
         {
             string connstring = "Data Source=DESKTOP-F97OPVH\\ANDREWSQLEXPRESS;Initial Catalog = logindatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";//Persist Security Info=False";
-            SqlConnection mycon = new SqlConnection(connstring);
-            return mycon;
+            SqlConnection dbconn = new SqlConnection(connstring);
+            return dbconn;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -36,7 +36,7 @@ namespace Blackboard_Application
             this.studentInformationTableAdapter.Fill(this.update8DataBase.StudentInformation);
             // TODO: This line of code loads data into the 'update8DataBase.StudentInformation' table. You can move, or remove it, as needed.
             this.studentInformationTableAdapter.Fill(this.update8DataBase.StudentInformation);
-           ;
+           
 
         }
 
@@ -54,7 +54,7 @@ namespace Blackboard_Application
         {
 
         }
-        public bool getComm(string connstring1)
+        public bool grabCom(string connstring1)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace Blackboard_Application
           
             try
             {
-                //string col1 = dataGridView1[0, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+                //Creates Variables for each columns
                 string col1 = StudentGrid[0, StudentGrid.CurrentCell.RowIndex].Value.ToString();
                 string col2 = StudentGrid[1, StudentGrid.CurrentCell.RowIndex].Value.ToString();
                 string col3 = StudentGrid[2, StudentGrid.CurrentCell.RowIndex].Value.ToString();
@@ -94,7 +94,7 @@ namespace Blackboard_Application
 
                 string insert_sql = "INSERT INTO StudentInformation([School ID],first_Name,last_Name,[Course Taken],[Class 1 Midterm],[Class 2 Midterm],[Class 3 Midterm],[Class 4 Midterm],[Class 1 Finals],[Class 2 Finals],[Class 3 Finals],[Class 4 Finals], GPA)VALUES('" + col1 + "','" + col2 + "','"+ col3 + "','" + col4 + "','" + col5 + "','" + col6 + "','" + col7 + "','" + col8 + "','" + col9 + "','" + col10 + "','" + col11 + "','" + col12 + "','" + col13 + "')";
 
-                if (this.getComm(insert_sql))
+                if (this.grabCom(insert_sql))
                 {
                     MessageBox.Show("Insert Success");
                 }
@@ -102,11 +102,11 @@ namespace Blackboard_Application
                 {
                     MessageBox.Show("Insert Failed");
                 }
-                //this.getComm(insert_sql);
+                //this.grabCom(insert_sql);
             }
-            catch
+            catch(Exception ex)
             {
-
+                
             }
             //Create a Visble Grid for All student information
             StudentGrid.Visible = true;
