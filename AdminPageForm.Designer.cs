@@ -36,10 +36,15 @@
             this.updateStudentButton = new System.Windows.Forms.Button();
             this.addStudentData = new System.Windows.Forms.Button();
             this.defaultGridView = new System.Windows.Forms.DataGridView();
-            this.viewStudentGrid = new System.Windows.Forms.DataGridView();
+            this.StudentGrid = new System.Windows.Forms.DataGridView();
+            this.update8DataBase = new Blackboard_Application.Update8DataBase();
+            this.update8DataBaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentInformationTableAdapter = new Blackboard_Application.Update8DataBaseTableAdapters.StudentInformationTableAdapter();
             this.schoolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseTakenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.class1MidtermDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.class2MidtermDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.class3MidtermDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,31 +54,12 @@
             this.class3FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.class4FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gPADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.blackboardDatabase = new Blackboard_Application.BlackboardDatabase();
-            this.blackboardDatabaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentInformationTableAdapter = new Blackboard_Application.BlackboardDatabaseTableAdapters.StudentInformationTableAdapter();
-            this.blackboardDatabaseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseTableAdapter = new Blackboard_Application.BlackboardDatabaseTableAdapters.CourseTableAdapter();
-            this.gradeBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gradeBookTableAdapter = new Blackboard_Application.BlackboardDatabaseTableAdapters.GradeBookTableAdapter();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new Blackboard_Application.BlackboardDatabaseTableAdapters.UsersTableAdapter();
-            this.blackboardDatabaseBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.blackboardDatabaseBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.defaultGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewStudentGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update8DataBase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update8DataBaseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabase)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradeBookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,7 +70,7 @@
             this.panel1.Controls.Add(this.updateStudentButton);
             this.panel1.Controls.Add(this.addStudentData);
             this.panel1.Controls.Add(this.defaultGridView);
-            this.panel1.Controls.Add(this.viewStudentGrid);
+            this.panel1.Controls.Add(this.StudentGrid);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -145,28 +131,28 @@
             // defaultGridView
             // 
             this.defaultGridView.AllowUserToOrderColumns = true;
-            this.defaultGridView.AutoGenerateColumns = false;
             this.defaultGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.defaultGridView.DataSource = this.blackboardDatabaseBindingSource3;
             this.defaultGridView.GridColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.defaultGridView.Location = new System.Drawing.Point(553, 85);
+            this.defaultGridView.Location = new System.Drawing.Point(553, 685);
             this.defaultGridView.Name = "defaultGridView";
             this.defaultGridView.RowHeadersWidth = 102;
             this.defaultGridView.RowTemplate.Height = 40;
-            this.defaultGridView.Size = new System.Drawing.Size(1688, 986);
+            this.defaultGridView.Size = new System.Drawing.Size(1688, 386);
             this.defaultGridView.TabIndex = 5;
             this.defaultGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.defaultGridView_CellContentClick);
             // 
-            // viewStudentGrid
+            // StudentGrid
             // 
-            this.viewStudentGrid.AllowUserToOrderColumns = true;
-            this.viewStudentGrid.AutoGenerateColumns = false;
-            this.viewStudentGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.viewStudentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.viewStudentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StudentGrid.AllowUserToOrderColumns = true;
+            this.StudentGrid.AutoGenerateColumns = false;
+            this.StudentGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.StudentGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.StudentGrid.ColumnHeadersHeight = 70;
+            this.StudentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.schoolIDDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
+            this.courseTakenDataGridViewTextBoxColumn,
             this.class1MidtermDataGridViewTextBoxColumn,
             this.class2MidtermDataGridViewTextBoxColumn,
             this.class3MidtermDataGridViewTextBoxColumn,
@@ -176,16 +162,35 @@
             this.class3FinalsDataGridViewTextBoxColumn,
             this.class4FinalsDataGridViewTextBoxColumn,
             this.gPADataGridViewTextBoxColumn});
-            this.viewStudentGrid.DataSource = this.studentInformationBindingSource;
-            this.viewStudentGrid.GridColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.viewStudentGrid.Location = new System.Drawing.Point(553, 85);
-            this.viewStudentGrid.Name = "viewStudentGrid";
-            this.viewStudentGrid.RowHeadersWidth = 102;
-            this.viewStudentGrid.RowTemplate.Height = 40;
-            this.viewStudentGrid.Size = new System.Drawing.Size(1688, 986);
-            this.viewStudentGrid.TabIndex = 1;
-            this.viewStudentGrid.Visible = false;
-            this.viewStudentGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.StudentGrid.DataSource = this.studentInformationBindingSource;
+            this.StudentGrid.GridColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.StudentGrid.Location = new System.Drawing.Point(553, 85);
+            this.StudentGrid.Name = "StudentGrid";
+            this.StudentGrid.RowHeadersWidth = 102;
+            this.StudentGrid.RowTemplate.Height = 40;
+            this.StudentGrid.Size = new System.Drawing.Size(1688, 986);
+            this.StudentGrid.TabIndex = 1;
+            this.StudentGrid.Visible = false;
+            this.StudentGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // update8DataBase
+            // 
+            this.update8DataBase.DataSetName = "Update8DataBase";
+            this.update8DataBase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // update8DataBaseBindingSource
+            // 
+            this.update8DataBaseBindingSource.DataSource = this.update8DataBase;
+            this.update8DataBaseBindingSource.Position = 0;
+            // 
+            // studentInformationBindingSource
+            // 
+            this.studentInformationBindingSource.DataMember = "StudentInformation";
+            this.studentInformationBindingSource.DataSource = this.update8DataBaseBindingSource;
+            // 
+            // studentInformationTableAdapter
+            // 
+            this.studentInformationTableAdapter.ClearBeforeFill = true;
             // 
             // schoolIDDataGridViewTextBoxColumn
             // 
@@ -193,6 +198,7 @@
             this.schoolIDDataGridViewTextBoxColumn.HeaderText = "School ID";
             this.schoolIDDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.schoolIDDataGridViewTextBoxColumn.Name = "schoolIDDataGridViewTextBoxColumn";
+            this.schoolIDDataGridViewTextBoxColumn.Width = 177;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -200,6 +206,7 @@
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "first_Name";
             this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 205;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
@@ -207,6 +214,15 @@
             this.lastNameDataGridViewTextBoxColumn.HeaderText = "last_Name";
             this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 204;
+            // 
+            // courseTakenDataGridViewTextBoxColumn
+            // 
+            this.courseTakenDataGridViewTextBoxColumn.DataPropertyName = "Course Taken";
+            this.courseTakenDataGridViewTextBoxColumn.HeaderText = "Course Taken";
+            this.courseTakenDataGridViewTextBoxColumn.MinimumWidth = 12;
+            this.courseTakenDataGridViewTextBoxColumn.Name = "courseTakenDataGridViewTextBoxColumn";
+            this.courseTakenDataGridViewTextBoxColumn.Width = 226;
             // 
             // class1MidtermDataGridViewTextBoxColumn
             // 
@@ -214,6 +230,7 @@
             this.class1MidtermDataGridViewTextBoxColumn.HeaderText = "Class 1 Midterm";
             this.class1MidtermDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.class1MidtermDataGridViewTextBoxColumn.Name = "class1MidtermDataGridViewTextBoxColumn";
+            this.class1MidtermDataGridViewTextBoxColumn.Width = 250;
             // 
             // class2MidtermDataGridViewTextBoxColumn
             // 
@@ -221,6 +238,7 @@
             this.class2MidtermDataGridViewTextBoxColumn.HeaderText = "Class 2 Midterm";
             this.class2MidtermDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.class2MidtermDataGridViewTextBoxColumn.Name = "class2MidtermDataGridViewTextBoxColumn";
+            this.class2MidtermDataGridViewTextBoxColumn.Width = 250;
             // 
             // class3MidtermDataGridViewTextBoxColumn
             // 
@@ -228,6 +246,7 @@
             this.class3MidtermDataGridViewTextBoxColumn.HeaderText = "Class 3 Midterm";
             this.class3MidtermDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.class3MidtermDataGridViewTextBoxColumn.Name = "class3MidtermDataGridViewTextBoxColumn";
+            this.class3MidtermDataGridViewTextBoxColumn.Width = 250;
             // 
             // class4MidtermDataGridViewTextBoxColumn
             // 
@@ -235,6 +254,7 @@
             this.class4MidtermDataGridViewTextBoxColumn.HeaderText = "Class 4 Midterm";
             this.class4MidtermDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.class4MidtermDataGridViewTextBoxColumn.Name = "class4MidtermDataGridViewTextBoxColumn";
+            this.class4MidtermDataGridViewTextBoxColumn.Width = 250;
             // 
             // class1FinalsDataGridViewTextBoxColumn
             // 
@@ -242,6 +262,7 @@
             this.class1FinalsDataGridViewTextBoxColumn.HeaderText = "Class 1 Finals";
             this.class1FinalsDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.class1FinalsDataGridViewTextBoxColumn.Name = "class1FinalsDataGridViewTextBoxColumn";
+            this.class1FinalsDataGridViewTextBoxColumn.Width = 227;
             // 
             // class2FinalsDataGridViewTextBoxColumn
             // 
@@ -249,6 +270,7 @@
             this.class2FinalsDataGridViewTextBoxColumn.HeaderText = "Class 2 Finals";
             this.class2FinalsDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.class2FinalsDataGridViewTextBoxColumn.Name = "class2FinalsDataGridViewTextBoxColumn";
+            this.class2FinalsDataGridViewTextBoxColumn.Width = 227;
             // 
             // class3FinalsDataGridViewTextBoxColumn
             // 
@@ -256,6 +278,7 @@
             this.class3FinalsDataGridViewTextBoxColumn.HeaderText = "Class 3 Finals";
             this.class3FinalsDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.class3FinalsDataGridViewTextBoxColumn.Name = "class3FinalsDataGridViewTextBoxColumn";
+            this.class3FinalsDataGridViewTextBoxColumn.Width = 227;
             // 
             // class4FinalsDataGridViewTextBoxColumn
             // 
@@ -263,6 +286,7 @@
             this.class4FinalsDataGridViewTextBoxColumn.HeaderText = "Class 4 Finals";
             this.class4FinalsDataGridViewTextBoxColumn.MinimumWidth = 12;
             this.class4FinalsDataGridViewTextBoxColumn.Name = "class4FinalsDataGridViewTextBoxColumn";
+            this.class4FinalsDataGridViewTextBoxColumn.Width = 227;
             // 
             // gPADataGridViewTextBoxColumn
             // 
@@ -270,67 +294,7 @@
             this.gPADataGridViewTextBoxColumn.HeaderText = "GPA";
             this.gPADataGridViewTextBoxColumn.MinimumWidth = 12;
             this.gPADataGridViewTextBoxColumn.Name = "gPADataGridViewTextBoxColumn";
-            // 
-            // studentInformationBindingSource
-            // 
-            this.studentInformationBindingSource.DataMember = "StudentInformation";
-            this.studentInformationBindingSource.DataSource = this.blackboardDatabase;
-            // 
-            // blackboardDatabase
-            // 
-            this.blackboardDatabase.DataSetName = "BlackboardDatabase";
-            this.blackboardDatabase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // blackboardDatabaseBindingSource
-            // 
-            this.blackboardDatabaseBindingSource.DataSource = this.blackboardDatabase;
-            this.blackboardDatabaseBindingSource.Position = 0;
-            // 
-            // studentInformationTableAdapter
-            // 
-            this.studentInformationTableAdapter.ClearBeforeFill = true;
-            // 
-            // blackboardDatabaseBindingSource1
-            // 
-            this.blackboardDatabaseBindingSource1.DataSource = this.blackboardDatabase;
-            this.blackboardDatabaseBindingSource1.Position = 0;
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataMember = "Course";
-            this.courseBindingSource.DataSource = this.blackboardDatabaseBindingSource1;
-            // 
-            // courseTableAdapter
-            // 
-            this.courseTableAdapter.ClearBeforeFill = true;
-            // 
-            // gradeBookBindingSource
-            // 
-            this.gradeBookBindingSource.DataMember = "GradeBook";
-            this.gradeBookBindingSource.DataSource = this.blackboardDatabaseBindingSource1;
-            // 
-            // gradeBookTableAdapter
-            // 
-            this.gradeBookTableAdapter.ClearBeforeFill = true;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.blackboardDatabaseBindingSource1;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // blackboardDatabaseBindingSource2
-            // 
-            this.blackboardDatabaseBindingSource2.DataSource = this.blackboardDatabase;
-            this.blackboardDatabaseBindingSource2.Position = 0;
-            // 
-            // blackboardDatabaseBindingSource3
-            // 
-            this.blackboardDatabaseBindingSource3.DataSource = this.blackboardDatabase;
-            this.blackboardDatabaseBindingSource3.Position = 0;
+            this.gPADataGridViewTextBoxColumn.Width = 129;
             // 
             // AdminPageForm
             // 
@@ -343,16 +307,10 @@
             this.Load += new System.EventHandler(this.MainPageForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.defaultGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewStudentGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update8DataBase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update8DataBaseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabase)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradeBookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackboardDatabaseBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,13 +323,16 @@
         private System.Windows.Forms.Button deleteStudentButton;
         private System.Windows.Forms.Button updateStudentButton;
         private System.Windows.Forms.Button addStudentData;
-        private System.Windows.Forms.BindingSource blackboardDatabaseBindingSource;
-        private BlackboardDatabase blackboardDatabase;
+        public System.Windows.Forms.DataGridView StudentGrid;
+        private System.Windows.Forms.DataGridView defaultGridView;
+        private System.Windows.Forms.BindingSource update8DataBaseBindingSource;
+        private Update8DataBase update8DataBase;
         private System.Windows.Forms.BindingSource studentInformationBindingSource;
-        private BlackboardDatabaseTableAdapters.StudentInformationTableAdapter studentInformationTableAdapter;
+        private Update8DataBaseTableAdapters.StudentInformationTableAdapter studentInformationTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn schoolIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseTakenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn class1MidtermDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn class2MidtermDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn class3MidtermDataGridViewTextBoxColumn;
@@ -381,16 +342,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn class3FinalsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn class4FinalsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gPADataGridViewTextBoxColumn;
-        public System.Windows.Forms.DataGridView viewStudentGrid;
-        private System.Windows.Forms.DataGridView defaultGridView;
-        private System.Windows.Forms.BindingSource blackboardDatabaseBindingSource1;
-        private System.Windows.Forms.BindingSource courseBindingSource;
-        private BlackboardDatabaseTableAdapters.CourseTableAdapter courseTableAdapter;
-        private System.Windows.Forms.BindingSource gradeBookBindingSource;
-        private BlackboardDatabaseTableAdapters.GradeBookTableAdapter gradeBookTableAdapter;
-        private System.Windows.Forms.BindingSource usersBindingSource;
-        private BlackboardDatabaseTableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.BindingSource blackboardDatabaseBindingSource3;
-        private System.Windows.Forms.BindingSource blackboardDatabaseBindingSource2;
     }
 }
