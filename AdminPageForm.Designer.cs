@@ -37,10 +37,6 @@
             this.addStudentData = new System.Windows.Forms.Button();
             this.defaultGridView = new System.Windows.Forms.DataGridView();
             this.StudentGrid = new System.Windows.Forms.DataGridView();
-            this.update8DataBase = new Blackboard_Application.Update8DataBase();
-            this.update8DataBaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentInformationTableAdapter = new Blackboard_Application.Update8DataBaseTableAdapters.StudentInformationTableAdapter();
             this.schoolIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,12 +50,16 @@
             this.class3FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.class4FinalsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gPADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.update8DataBaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.update8DataBase = new Blackboard_Application.Update8DataBase();
+            this.studentInformationTableAdapter = new Blackboard_Application.Update8DataBaseTableAdapters.StudentInformationTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.defaultGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.update8DataBase)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.update8DataBaseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update8DataBaseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update8DataBase)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -173,25 +173,6 @@
             this.StudentGrid.Visible = false;
             this.StudentGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // update8DataBase
-            // 
-            this.update8DataBase.DataSetName = "Update8DataBase";
-            this.update8DataBase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // update8DataBaseBindingSource
-            // 
-            this.update8DataBaseBindingSource.DataSource = this.update8DataBase;
-            this.update8DataBaseBindingSource.Position = 0;
-            // 
-            // studentInformationBindingSource
-            // 
-            this.studentInformationBindingSource.DataMember = "StudentInformation";
-            this.studentInformationBindingSource.DataSource = this.update8DataBaseBindingSource;
-            // 
-            // studentInformationTableAdapter
-            // 
-            this.studentInformationTableAdapter.ClearBeforeFill = true;
-            // 
             // schoolIDDataGridViewTextBoxColumn
             // 
             this.schoolIDDataGridViewTextBoxColumn.DataPropertyName = "School ID";
@@ -296,6 +277,25 @@
             this.gPADataGridViewTextBoxColumn.Name = "gPADataGridViewTextBoxColumn";
             this.gPADataGridViewTextBoxColumn.Width = 129;
             // 
+            // studentInformationBindingSource
+            // 
+            this.studentInformationBindingSource.DataMember = "StudentInformation";
+            this.studentInformationBindingSource.DataSource = this.update8DataBaseBindingSource;
+            // 
+            // update8DataBaseBindingSource
+            // 
+            this.update8DataBaseBindingSource.DataSource = this.update8DataBase;
+            this.update8DataBaseBindingSource.Position = 0;
+            // 
+            // update8DataBase
+            // 
+            this.update8DataBase.DataSetName = "Update8DataBase";
+            this.update8DataBase.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentInformationTableAdapter
+            // 
+            this.studentInformationTableAdapter.ClearBeforeFill = true;
+            // 
             // AdminPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -308,9 +308,9 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.defaultGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.update8DataBase)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.update8DataBaseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update8DataBaseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update8DataBase)).EndInit();
             this.ResumeLayout(false);
 
         }
