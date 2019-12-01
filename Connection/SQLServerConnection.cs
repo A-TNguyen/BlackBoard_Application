@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 
+
 namespace Blackboard_Application.Connection
 {
     class SQLServerConnection

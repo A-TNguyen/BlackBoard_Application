@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Blackboard_Application
 {
     public partial class AdminViewForm : Form
@@ -66,11 +67,16 @@ namespace Blackboard_Application
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-            this.Hide(); // First need to hide main page
-            LoginForm login = new LoginForm(); // Initialize LoginForm to a value
-            login.ShowDialog(); //Enable you to go back to Login Page Form
-            this.Close(); // Make sure to close out this MainPage Window
-            login.Dispose(); //Dispose the login after used
+            
+            using (LoginForm login = new LoginForm())  // Initialize LoginForm to a value
+            {
+                this.Hide(); // First need to hide main page
+                login.ShowDialog(); //Enable you to go back to Login Page Form
+                //this.Close();
+                //login.Dispose();
+                //Application.Exit();
+                //this.Close(); // Make sure to close out this MainPage Window
+            }
         }
 
         private void gPATextBox_TextChanged(object sender, EventArgs e)

@@ -45,23 +45,39 @@ namespace Blackboard_Application
                                                                       //mySQL += "AND password = '1'";
 
                 //Using helps dispose of null connection
-                using (DataTable userData = SQLServerConnection.ExecuteSQL(mySQL)) 
+                using (DataTable userData = SQLServerConnection.ExecuteSQL(mySQL))
+                
                 {
                     if (userData.Rows.Count > 0)
                     {
-                        loginInput.Clear();
-                        passwordInput.Clear();
+                        
+                        if (loginInput.Text == "admin")
+                        {
+                            loginInput.Clear();
+                            passwordInput.Clear();
+                            using (AdminViewForm addPage = new AdminViewForm())// Initialize LoginForm to a value
+                            {
+                                this.Hide(); // First need to hide main page
+                                addPage.ShowDialog(); //Enable you to go back to Login Page Form
+                                //this.Close(); // Make sure to close out this MainPage Window
+                                this.loginInput.Select();
 
+                                //Application.Exit();
+                            }
+                        }
+                        else
+                        {
+                            loginInput.Clear();
+                            passwordInput.Clear();
+                            using (StudentViewForm studentPage = new StudentViewForm())  // Initialize LoginForm to a value
+                            {
+                                this.Hide(); // First need to hide main page
+                                studentPage.ShowDialog(); //Enable you to go back to Login Page Form
+                                //this.Close(); // Make sure to close out this MainPage Window
+                                this.loginInput.Select();
 
-
-                        this.Hide(); // First need to hide main page
-                        AdminViewForm addPage = new AdminViewForm(); // Initialize LoginForm to a value
-                        addPage.ShowDialog(); //Enable you to go back to Login Page Form
-                        //this.Close(); // Make sure to close out this MainPage Window
-                        //this.Show();
-                        this.loginInput.Select();
-                        Application.Exit();
-                       
+                            }
+                        }
 
                     }
                     else
@@ -87,6 +103,14 @@ namespace Blackboard_Application
         private void cancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.studentInfoDataSet);
+
         }
     }
 }

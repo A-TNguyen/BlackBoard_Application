@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.loginInput = new System.Windows.Forms.TextBox();
             this.passwordInput = new System.Windows.Forms.TextBox();
@@ -37,7 +38,13 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.studentInfoDataSet = new Blackboard_Application.StudentInfoDataSet();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new Blackboard_Application.StudentInfoDataSetTableAdapters.UsersTableAdapter();
+            this.tableAdapterManager = new Blackboard_Application.StudentInfoDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInfoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // loginInput
@@ -147,6 +154,27 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Welcome to Blackboard 3.0";
             // 
+            // studentInfoDataSet
+            // 
+            this.studentInfoDataSet.DataSetName = "StudentInfoDataSet";
+            this.studentInfoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.studentInfoDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.StudentInformationTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Blackboard_Application.StudentInfoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
+            // 
             // LoginForm
             // 
             this.AcceptButton = this.loginButton;
@@ -170,6 +198,8 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_page_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInfoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +215,9 @@
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label label3;
+        private StudentInfoDataSet studentInfoDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private StudentInfoDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private StudentInfoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
