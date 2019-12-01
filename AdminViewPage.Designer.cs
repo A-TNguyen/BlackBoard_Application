@@ -389,7 +389,7 @@
             this.studentInformationDataGridView.Name = "studentInformationDataGridView";
             this.studentInformationDataGridView.RowHeadersWidth = 102;
             this.studentInformationDataGridView.RowTemplate.Height = 40;
-            this.studentInformationDataGridView.Size = new System.Drawing.Size(1676, 1212);
+            this.studentInformationDataGridView.Size = new System.Drawing.Size(1676, 1297);
             this.studentInformationDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -600,6 +600,7 @@
             this.gPATextBox.Name = "gPATextBox";
             this.gPATextBox.Size = new System.Drawing.Size(216, 38);
             this.gPATextBox.TabIndex = 27;
+            this.gPATextBox.TextChanged += new System.EventHandler(this.gPATextBox_TextChanged);
             // 
             // AddButton
             // 
@@ -613,7 +614,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(296, 1192);
+            this.SaveButton.Location = new System.Drawing.Point(296, 1195);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(216, 58);
             this.SaveButton.TabIndex = 29;
@@ -623,7 +624,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(296, 1268);
+            this.DeleteButton.Location = new System.Drawing.Point(296, 1274);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(216, 58);
             this.DeleteButton.TabIndex = 30;
@@ -644,7 +645,7 @@
             // 
             // LogoutButton
             // 
-            this.LogoutButton.Location = new System.Drawing.Point(2043, 1332);
+            this.LogoutButton.Location = new System.Drawing.Point(296, 1353);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(216, 58);
             this.LogoutButton.TabIndex = 31;
@@ -656,7 +657,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2345, 1402);
+            this.ClientSize = new System.Drawing.Size(2345, 1458);
             this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.SaveButton);

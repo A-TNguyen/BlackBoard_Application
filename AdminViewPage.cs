@@ -72,5 +72,10 @@ namespace Blackboard_Application
             this.Close(); // Make sure to close out this MainPage Window
             login.Dispose(); //Dispose the login after used
         }
+
+        private void gPATextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

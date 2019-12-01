@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Blackboard_Application.Connection;
 
 namespace Blackboard_Application
 {
@@ -45,7 +44,7 @@ namespace Blackboard_Application
                                                                       //mySQL += "AND password = '1'";
 
                 //Using helps dispose of null connection
-                using (DataTable userData = SQLServerConnection.ExecuteSQL(mySQL)) 
+                //using (DataTable userData = SQLServerConnection.ExecuteSQL(mySQL)) 
                 {
                     if (userData.Rows.Count > 0)
                     {
@@ -55,8 +54,8 @@ namespace Blackboard_Application
 
 
                         this.Hide(); // First need to hide main page
-                        AdminPageForm maPage = new AdminPageForm(); // Initialize LoginForm to a value
-                        maPage.ShowDialog(); //Enable you to go back to Login Page Form
+                        AdminViewForm addPage = new AdminViewForm(); // Initialize LoginForm to a value
+                        addPage.ShowDialog(); //Enable you to go back to Login Page Form
                         this.Close(); // Make sure to close out this MainPage Window
                         this.Show();
                         this.loginInput.Select();
