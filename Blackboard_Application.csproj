@@ -75,6 +75,7 @@
     <Compile Include="AdminViewPage.Designer.cs">
       <DependentUpon>AdminViewPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connection\SQLServerConnection.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,8 +166,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Connection\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

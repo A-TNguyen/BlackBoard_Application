@@ -13,7 +13,7 @@ namespace Blackboard_Application.Connection
     class SQLServerConnection
     {
         //This is establishing the source connection where the DB is edit : Data Source = DB Path , make sure to add '\\' instead of '\' ; and Intial Catalog = *database name*
-        public static string stringConnection = "Data Source=DESKTOP-F97OPVH\\ANDREWSQLEXPRESS;Initial Catalog = logindatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
 
         public static DataTable ExecuteSQL(string sql)
         {
