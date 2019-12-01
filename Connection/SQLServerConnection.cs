@@ -12,6 +12,7 @@ namespace Blackboard_Application.Connection
 {
     class SQLServerConnection
     {
+        //Pleae make sure to change the AttachDBFileName
         //This is establishing the source connection where the DB is edit : Data Source = DB Path , make sure to add '\\' instead of '\' ; and Intial Catalog = *database name*
         public static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
 
@@ -41,7 +42,7 @@ namespace Blackboard_Application.Connection
                     System.Windows.Forms.MessageBox.Show("Error occured: " + ex.Message,
                         "SQL Server Connection failed to connect",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //dt = null;
+                 
                 }
                 con.Dispose();
 
