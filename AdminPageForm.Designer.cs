@@ -133,11 +133,11 @@
             this.defaultGridView.AllowUserToOrderColumns = true;
             this.defaultGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.defaultGridView.GridColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.defaultGridView.Location = new System.Drawing.Point(553, 685);
+            this.defaultGridView.Location = new System.Drawing.Point(553, 85);
             this.defaultGridView.Name = "defaultGridView";
             this.defaultGridView.RowHeadersWidth = 102;
             this.defaultGridView.RowTemplate.Height = 40;
-            this.defaultGridView.Size = new System.Drawing.Size(1688, 386);
+            this.defaultGridView.Size = new System.Drawing.Size(1688, 986);
             this.defaultGridView.TabIndex = 5;
             this.defaultGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.defaultGridView_CellContentClick);
             // 

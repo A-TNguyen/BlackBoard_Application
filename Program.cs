@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Blackboard_Application
 {
@@ -16,7 +17,7 @@ namespace Blackboard_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminPageForm()); // To start the application
+            Application.Run(new AdminViewForm()); // To start the application
         }
     }
 }
