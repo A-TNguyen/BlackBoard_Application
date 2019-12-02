@@ -13,8 +13,10 @@ namespace Blackboard_Application
 {
     public partial class LoginForm : Form
     {
+        public static string passingText;
         public LoginForm()
         {
+            
             InitializeComponent();
             
         }
@@ -31,6 +33,7 @@ namespace Blackboard_Application
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            passingText = loginInput.Text;
             //If statement where String Input Cannot be null or empty
             if(!string.IsNullOrEmpty(loginInput.Text) &&
             !string.IsNullOrEmpty(passwordInput.Text))
@@ -61,7 +64,7 @@ namespace Blackboard_Application
                                 addPage.ShowDialog(); //Enable you to go back to Login Page Form
                                 //this.Close(); // Make sure to close out this MainPage Window
                                 this.loginInput.Select();
-
+                                
                                 //Application.Exit();
                             }
                         }

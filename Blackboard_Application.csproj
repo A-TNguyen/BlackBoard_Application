@@ -90,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentInfoDataSet.cs">
+      <DependentUpon>StudentInfoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StudentInfoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

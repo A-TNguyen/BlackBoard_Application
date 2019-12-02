@@ -42,10 +42,6 @@
             System.Windows.Forms.Label class_3_FinalsLabel;
             System.Windows.Forms.Label class_4_FinalsLabel;
             System.Windows.Forms.Label gPALabel;
-            this.studentInfoDataSet = new Blackboard_Application.StudentInfoDataSet();
-            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentInformationTableAdapter = new Blackboard_Application.StudentInfoDataSetTableAdapters.StudentInformationTableAdapter();
-            this.tableAdapterManager = new Blackboard_Application.StudentInfoDataSetTableAdapters.TableAdapterManager();
             this.school_IDTextBox = new System.Windows.Forms.TextBox();
             this.first_NameTextBox = new System.Windows.Forms.TextBox();
             this.last_NameTextBox = new System.Windows.Forms.TextBox();
@@ -60,6 +56,11 @@
             this.class_4_FinalsTextBox = new System.Windows.Forms.TextBox();
             this.gPATextBox = new System.Windows.Forms.TextBox();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentInfoDataSet = new Blackboard_Application.StudentInfoDataSet();
+            this.studentInformationTableAdapter = new Blackboard_Application.StudentInfoDataSetTableAdapters.StudentInformationTableAdapter();
+            this.tableAdapterManager = new Blackboard_Application.StudentInfoDataSetTableAdapters.TableAdapterManager();
+            this.afterloginbox = new System.Windows.Forms.TextBox();
             school_IDLabel = new System.Windows.Forms.Label();
             first_NameLabel = new System.Windows.Forms.Label();
             last_NameLabel = new System.Windows.Forms.Label();
@@ -73,30 +74,9 @@
             class_3_FinalsLabel = new System.Windows.Forms.Label();
             class_4_FinalsLabel = new System.Windows.Forms.Label();
             gPALabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.studentInfoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInfoDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // studentInfoDataSet
-            // 
-            this.studentInfoDataSet.DataSetName = "StudentInfoDataSet";
-            this.studentInfoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentInformationBindingSource
-            // 
-            this.studentInformationBindingSource.DataMember = "StudentInformation";
-            this.studentInformationBindingSource.DataSource = this.studentInfoDataSet;
-            // 
-            // studentInformationTableAdapter
-            // 
-            this.studentInformationTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.StudentInformationTableAdapter = this.studentInformationTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Blackboard_Application.StudentInfoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsersTableAdapter = null;
             // 
             // school_IDLabel
             // 
@@ -108,16 +88,6 @@
             school_IDLabel.TabIndex = 1;
             school_IDLabel.Text = "School ID:";
             // 
-            // school_IDTextBox
-            // 
-            this.school_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "School ID", true));
-            this.school_IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.school_IDTextBox.Location = new System.Drawing.Point(501, 62);
-            this.school_IDTextBox.Name = "school_IDTextBox";
-            this.school_IDTextBox.ReadOnly = true;
-            this.school_IDTextBox.Size = new System.Drawing.Size(411, 53);
-            this.school_IDTextBox.TabIndex = 2;
-            // 
             // first_NameLabel
             // 
             first_NameLabel.AutoSize = true;
@@ -127,16 +97,6 @@
             first_NameLabel.Size = new System.Drawing.Size(223, 46);
             first_NameLabel.TabIndex = 3;
             first_NameLabel.Text = "first Name:";
-            // 
-            // first_NameTextBox
-            // 
-            this.first_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "first_Name", true));
-            this.first_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.first_NameTextBox.Location = new System.Drawing.Point(501, 132);
-            this.first_NameTextBox.Name = "first_NameTextBox";
-            this.first_NameTextBox.ReadOnly = true;
-            this.first_NameTextBox.Size = new System.Drawing.Size(411, 53);
-            this.first_NameTextBox.TabIndex = 4;
             // 
             // last_NameLabel
             // 
@@ -148,16 +108,6 @@
             last_NameLabel.TabIndex = 5;
             last_NameLabel.Text = "last Name:";
             // 
-            // last_NameTextBox
-            // 
-            this.last_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "last_Name", true));
-            this.last_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.last_NameTextBox.Location = new System.Drawing.Point(501, 202);
-            this.last_NameTextBox.Name = "last_NameTextBox";
-            this.last_NameTextBox.ReadOnly = true;
-            this.last_NameTextBox.Size = new System.Drawing.Size(411, 53);
-            this.last_NameTextBox.TabIndex = 6;
-            // 
             // course_TakenLabel
             // 
             course_TakenLabel.AutoSize = true;
@@ -167,16 +117,6 @@
             course_TakenLabel.Size = new System.Drawing.Size(294, 46);
             course_TakenLabel.TabIndex = 7;
             course_TakenLabel.Text = "Course Taken:";
-            // 
-            // course_TakenTextBox
-            // 
-            this.course_TakenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Course Taken", true));
-            this.course_TakenTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.course_TakenTextBox.Location = new System.Drawing.Point(501, 272);
-            this.course_TakenTextBox.Name = "course_TakenTextBox";
-            this.course_TakenTextBox.ReadOnly = true;
-            this.course_TakenTextBox.Size = new System.Drawing.Size(411, 53);
-            this.course_TakenTextBox.TabIndex = 8;
             // 
             // class_1_MidtermLabel
             // 
@@ -188,16 +128,6 @@
             class_1_MidtermLabel.TabIndex = 9;
             class_1_MidtermLabel.Text = "Class 1 Midterm:";
             // 
-            // class_1_MidtermTextBox
-            // 
-            this.class_1_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 1 Midterm", true));
-            this.class_1_MidtermTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.class_1_MidtermTextBox.Location = new System.Drawing.Point(501, 342);
-            this.class_1_MidtermTextBox.Name = "class_1_MidtermTextBox";
-            this.class_1_MidtermTextBox.ReadOnly = true;
-            this.class_1_MidtermTextBox.Size = new System.Drawing.Size(411, 53);
-            this.class_1_MidtermTextBox.TabIndex = 10;
-            // 
             // class_2_MidtermLabel
             // 
             class_2_MidtermLabel.AutoSize = true;
@@ -207,16 +137,6 @@
             class_2_MidtermLabel.Size = new System.Drawing.Size(334, 46);
             class_2_MidtermLabel.TabIndex = 11;
             class_2_MidtermLabel.Text = "Class 2 Midterm:";
-            // 
-            // class_2_MidtermTextBox
-            // 
-            this.class_2_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 2 Midterm", true));
-            this.class_2_MidtermTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.class_2_MidtermTextBox.Location = new System.Drawing.Point(501, 412);
-            this.class_2_MidtermTextBox.Name = "class_2_MidtermTextBox";
-            this.class_2_MidtermTextBox.ReadOnly = true;
-            this.class_2_MidtermTextBox.Size = new System.Drawing.Size(411, 53);
-            this.class_2_MidtermTextBox.TabIndex = 12;
             // 
             // class_3_MidtermLabel
             // 
@@ -228,16 +148,6 @@
             class_3_MidtermLabel.TabIndex = 13;
             class_3_MidtermLabel.Text = "Class 3 Midterm:";
             // 
-            // class_3_MidtermTextBox
-            // 
-            this.class_3_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 3 Midterm", true));
-            this.class_3_MidtermTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.class_3_MidtermTextBox.Location = new System.Drawing.Point(501, 482);
-            this.class_3_MidtermTextBox.Name = "class_3_MidtermTextBox";
-            this.class_3_MidtermTextBox.ReadOnly = true;
-            this.class_3_MidtermTextBox.Size = new System.Drawing.Size(411, 53);
-            this.class_3_MidtermTextBox.TabIndex = 14;
-            // 
             // class_4_MidtermLabel
             // 
             class_4_MidtermLabel.AutoSize = true;
@@ -247,16 +157,6 @@
             class_4_MidtermLabel.Size = new System.Drawing.Size(334, 46);
             class_4_MidtermLabel.TabIndex = 15;
             class_4_MidtermLabel.Text = "Class 4 Midterm:";
-            // 
-            // class_4_MidtermTextBox
-            // 
-            this.class_4_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 4 Midterm", true));
-            this.class_4_MidtermTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.class_4_MidtermTextBox.Location = new System.Drawing.Point(501, 552);
-            this.class_4_MidtermTextBox.Name = "class_4_MidtermTextBox";
-            this.class_4_MidtermTextBox.ReadOnly = true;
-            this.class_4_MidtermTextBox.Size = new System.Drawing.Size(411, 53);
-            this.class_4_MidtermTextBox.TabIndex = 16;
             // 
             // class_1_FinalsLabel
             // 
@@ -268,16 +168,6 @@
             class_1_FinalsLabel.TabIndex = 17;
             class_1_FinalsLabel.Text = "Class 1 Finals:";
             // 
-            // class_1_FinalsTextBox
-            // 
-            this.class_1_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 1 Finals", true));
-            this.class_1_FinalsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.class_1_FinalsTextBox.Location = new System.Drawing.Point(501, 622);
-            this.class_1_FinalsTextBox.Name = "class_1_FinalsTextBox";
-            this.class_1_FinalsTextBox.ReadOnly = true;
-            this.class_1_FinalsTextBox.Size = new System.Drawing.Size(411, 53);
-            this.class_1_FinalsTextBox.TabIndex = 18;
-            // 
             // class_2_FinalsLabel
             // 
             class_2_FinalsLabel.AutoSize = true;
@@ -287,16 +177,6 @@
             class_2_FinalsLabel.Size = new System.Drawing.Size(296, 46);
             class_2_FinalsLabel.TabIndex = 19;
             class_2_FinalsLabel.Text = "Class 2 Finals:";
-            // 
-            // class_2_FinalsTextBox
-            // 
-            this.class_2_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 2 Finals", true));
-            this.class_2_FinalsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.class_2_FinalsTextBox.Location = new System.Drawing.Point(501, 692);
-            this.class_2_FinalsTextBox.Name = "class_2_FinalsTextBox";
-            this.class_2_FinalsTextBox.ReadOnly = true;
-            this.class_2_FinalsTextBox.Size = new System.Drawing.Size(411, 53);
-            this.class_2_FinalsTextBox.TabIndex = 20;
             // 
             // class_3_FinalsLabel
             // 
@@ -308,16 +188,6 @@
             class_3_FinalsLabel.TabIndex = 21;
             class_3_FinalsLabel.Text = "Class 3 Finals:";
             // 
-            // class_3_FinalsTextBox
-            // 
-            this.class_3_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 3 Finals", true));
-            this.class_3_FinalsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.class_3_FinalsTextBox.Location = new System.Drawing.Point(501, 762);
-            this.class_3_FinalsTextBox.Name = "class_3_FinalsTextBox";
-            this.class_3_FinalsTextBox.ReadOnly = true;
-            this.class_3_FinalsTextBox.Size = new System.Drawing.Size(411, 53);
-            this.class_3_FinalsTextBox.TabIndex = 22;
-            // 
             // class_4_FinalsLabel
             // 
             class_4_FinalsLabel.AutoSize = true;
@@ -328,16 +198,6 @@
             class_4_FinalsLabel.TabIndex = 23;
             class_4_FinalsLabel.Text = "Class 4 Finals:";
             // 
-            // class_4_FinalsTextBox
-            // 
-            this.class_4_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 4 Finals", true));
-            this.class_4_FinalsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.class_4_FinalsTextBox.Location = new System.Drawing.Point(501, 832);
-            this.class_4_FinalsTextBox.Name = "class_4_FinalsTextBox";
-            this.class_4_FinalsTextBox.ReadOnly = true;
-            this.class_4_FinalsTextBox.Size = new System.Drawing.Size(411, 53);
-            this.class_4_FinalsTextBox.TabIndex = 24;
-            // 
             // gPALabel
             // 
             gPALabel.AutoSize = true;
@@ -347,6 +207,128 @@
             gPALabel.Size = new System.Drawing.Size(120, 46);
             gPALabel.TabIndex = 25;
             gPALabel.Text = "GPA:";
+            // 
+            // school_IDTextBox
+            // 
+            this.school_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "School ID", true));
+            this.school_IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.school_IDTextBox.Location = new System.Drawing.Point(501, 62);
+            this.school_IDTextBox.Name = "school_IDTextBox";
+            this.school_IDTextBox.ReadOnly = true;
+            this.school_IDTextBox.Size = new System.Drawing.Size(411, 53);
+            this.school_IDTextBox.TabIndex = 2;
+            this.school_IDTextBox.TextChanged += new System.EventHandler(this.school_IDTextBox_TextChanged);
+            // 
+            // first_NameTextBox
+            // 
+            this.first_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "first_Name", true));
+            this.first_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.first_NameTextBox.Location = new System.Drawing.Point(501, 132);
+            this.first_NameTextBox.Name = "first_NameTextBox";
+            this.first_NameTextBox.ReadOnly = true;
+            this.first_NameTextBox.Size = new System.Drawing.Size(411, 53);
+            this.first_NameTextBox.TabIndex = 4;
+            this.first_NameTextBox.TextChanged += new System.EventHandler(this.first_NameTextBox_TextChanged);
+            // 
+            // last_NameTextBox
+            // 
+            this.last_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "last_Name", true));
+            this.last_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.last_NameTextBox.Location = new System.Drawing.Point(501, 202);
+            this.last_NameTextBox.Name = "last_NameTextBox";
+            this.last_NameTextBox.ReadOnly = true;
+            this.last_NameTextBox.Size = new System.Drawing.Size(411, 53);
+            this.last_NameTextBox.TabIndex = 6;
+            // 
+            // course_TakenTextBox
+            // 
+            this.course_TakenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Course Taken", true));
+            this.course_TakenTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.course_TakenTextBox.Location = new System.Drawing.Point(501, 272);
+            this.course_TakenTextBox.Name = "course_TakenTextBox";
+            this.course_TakenTextBox.ReadOnly = true;
+            this.course_TakenTextBox.Size = new System.Drawing.Size(411, 53);
+            this.course_TakenTextBox.TabIndex = 8;
+            // 
+            // class_1_MidtermTextBox
+            // 
+            this.class_1_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 1 Midterm", true));
+            this.class_1_MidtermTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class_1_MidtermTextBox.Location = new System.Drawing.Point(501, 342);
+            this.class_1_MidtermTextBox.Name = "class_1_MidtermTextBox";
+            this.class_1_MidtermTextBox.ReadOnly = true;
+            this.class_1_MidtermTextBox.Size = new System.Drawing.Size(411, 53);
+            this.class_1_MidtermTextBox.TabIndex = 10;
+            // 
+            // class_2_MidtermTextBox
+            // 
+            this.class_2_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 2 Midterm", true));
+            this.class_2_MidtermTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class_2_MidtermTextBox.Location = new System.Drawing.Point(501, 412);
+            this.class_2_MidtermTextBox.Name = "class_2_MidtermTextBox";
+            this.class_2_MidtermTextBox.ReadOnly = true;
+            this.class_2_MidtermTextBox.Size = new System.Drawing.Size(411, 53);
+            this.class_2_MidtermTextBox.TabIndex = 12;
+            // 
+            // class_3_MidtermTextBox
+            // 
+            this.class_3_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 3 Midterm", true));
+            this.class_3_MidtermTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class_3_MidtermTextBox.Location = new System.Drawing.Point(501, 482);
+            this.class_3_MidtermTextBox.Name = "class_3_MidtermTextBox";
+            this.class_3_MidtermTextBox.ReadOnly = true;
+            this.class_3_MidtermTextBox.Size = new System.Drawing.Size(411, 53);
+            this.class_3_MidtermTextBox.TabIndex = 14;
+            // 
+            // class_4_MidtermTextBox
+            // 
+            this.class_4_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 4 Midterm", true));
+            this.class_4_MidtermTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class_4_MidtermTextBox.Location = new System.Drawing.Point(501, 552);
+            this.class_4_MidtermTextBox.Name = "class_4_MidtermTextBox";
+            this.class_4_MidtermTextBox.ReadOnly = true;
+            this.class_4_MidtermTextBox.Size = new System.Drawing.Size(411, 53);
+            this.class_4_MidtermTextBox.TabIndex = 16;
+            // 
+            // class_1_FinalsTextBox
+            // 
+            this.class_1_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 1 Finals", true));
+            this.class_1_FinalsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class_1_FinalsTextBox.Location = new System.Drawing.Point(501, 622);
+            this.class_1_FinalsTextBox.Name = "class_1_FinalsTextBox";
+            this.class_1_FinalsTextBox.ReadOnly = true;
+            this.class_1_FinalsTextBox.Size = new System.Drawing.Size(411, 53);
+            this.class_1_FinalsTextBox.TabIndex = 18;
+            // 
+            // class_2_FinalsTextBox
+            // 
+            this.class_2_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 2 Finals", true));
+            this.class_2_FinalsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class_2_FinalsTextBox.Location = new System.Drawing.Point(501, 692);
+            this.class_2_FinalsTextBox.Name = "class_2_FinalsTextBox";
+            this.class_2_FinalsTextBox.ReadOnly = true;
+            this.class_2_FinalsTextBox.Size = new System.Drawing.Size(411, 53);
+            this.class_2_FinalsTextBox.TabIndex = 20;
+            // 
+            // class_3_FinalsTextBox
+            // 
+            this.class_3_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 3 Finals", true));
+            this.class_3_FinalsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class_3_FinalsTextBox.Location = new System.Drawing.Point(501, 762);
+            this.class_3_FinalsTextBox.Name = "class_3_FinalsTextBox";
+            this.class_3_FinalsTextBox.ReadOnly = true;
+            this.class_3_FinalsTextBox.Size = new System.Drawing.Size(411, 53);
+            this.class_3_FinalsTextBox.TabIndex = 22;
+            // 
+            // class_4_FinalsTextBox
+            // 
+            this.class_4_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 4 Finals", true));
+            this.class_4_FinalsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class_4_FinalsTextBox.Location = new System.Drawing.Point(501, 832);
+            this.class_4_FinalsTextBox.Name = "class_4_FinalsTextBox";
+            this.class_4_FinalsTextBox.ReadOnly = true;
+            this.class_4_FinalsTextBox.Size = new System.Drawing.Size(411, 53);
+            this.class_4_FinalsTextBox.TabIndex = 24;
             // 
             // gPATextBox
             // 
@@ -368,11 +350,41 @@
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
+            // studentInformationBindingSource
+            // 
+            this.studentInformationBindingSource.DataMember = "StudentInformation";
+            this.studentInformationBindingSource.DataSource = this.studentInfoDataSet;
+            // 
+            // studentInfoDataSet
+            // 
+            this.studentInfoDataSet.DataSetName = "StudentInfoDataSet";
+            this.studentInfoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentInformationTableAdapter
+            // 
+            this.studentInformationTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.StudentInformationTableAdapter = this.studentInformationTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Blackboard_Application.StudentInfoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsersTableAdapter = null;
+            // 
+            // afterloginbox
+            // 
+            this.afterloginbox.Location = new System.Drawing.Point(76, 1028);
+            this.afterloginbox.Name = "afterloginbox";
+            this.afterloginbox.Size = new System.Drawing.Size(364, 38);
+            this.afterloginbox.TabIndex = 28;
+            this.afterloginbox.TextChanged += new System.EventHandler(this.afterloginbox_TextChanged);
+            // 
             // StudentViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 1183);
+            this.Controls.Add(this.afterloginbox);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(school_IDLabel);
             this.Controls.Add(this.school_IDTextBox);
@@ -403,8 +415,8 @@
             this.Name = "StudentViewForm";
             this.Text = "Blackboard 3.0 Student Information";
             this.Load += new System.EventHandler(this.StudentViewForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.studentInfoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentInformationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentInfoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,5 +442,6 @@
         private System.Windows.Forms.TextBox class_4_FinalsTextBox;
         private System.Windows.Forms.TextBox gPATextBox;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.TextBox afterloginbox;
     }
 }
