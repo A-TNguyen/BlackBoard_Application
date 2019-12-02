@@ -98,117 +98,130 @@
             // school_IDLabel
             // 
             school_IDLabel.AutoSize = true;
-            school_IDLabel.Location = new System.Drawing.Point(28, 114);
+            school_IDLabel.Location = new System.Drawing.Point(10, 48);
+            school_IDLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             school_IDLabel.Name = "school_IDLabel";
-            school_IDLabel.Size = new System.Drawing.Size(145, 32);
+            school_IDLabel.Size = new System.Drawing.Size(57, 13);
             school_IDLabel.TabIndex = 2;
             school_IDLabel.Text = "School ID:";
             // 
             // first_NameLabel
             // 
             first_NameLabel.AutoSize = true;
-            first_NameLabel.Location = new System.Drawing.Point(28, 190);
+            first_NameLabel.Location = new System.Drawing.Point(10, 80);
+            first_NameLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             first_NameLabel.Name = "first_NameLabel";
-            first_NameLabel.Size = new System.Drawing.Size(151, 32);
+            first_NameLabel.Size = new System.Drawing.Size(57, 13);
             first_NameLabel.TabIndex = 4;
             first_NameLabel.Text = "first Name:";
             // 
             // last_NameLabel
             // 
             last_NameLabel.AutoSize = true;
-            last_NameLabel.Location = new System.Drawing.Point(28, 266);
+            last_NameLabel.Location = new System.Drawing.Point(10, 112);
+            last_NameLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             last_NameLabel.Name = "last_NameLabel";
-            last_NameLabel.Size = new System.Drawing.Size(150, 32);
+            last_NameLabel.Size = new System.Drawing.Size(57, 13);
             last_NameLabel.TabIndex = 6;
             last_NameLabel.Text = "last Name:";
             // 
             // course_TakenLabel
             // 
             course_TakenLabel.AutoSize = true;
-            course_TakenLabel.Location = new System.Drawing.Point(28, 342);
+            course_TakenLabel.Location = new System.Drawing.Point(10, 143);
+            course_TakenLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             course_TakenLabel.Name = "course_TakenLabel";
-            course_TakenLabel.Size = new System.Drawing.Size(200, 32);
+            course_TakenLabel.Size = new System.Drawing.Size(77, 13);
             course_TakenLabel.TabIndex = 8;
             course_TakenLabel.Text = "Course Taken:";
             // 
             // class_1_MidtermLabel
             // 
             class_1_MidtermLabel.AutoSize = true;
-            class_1_MidtermLabel.Location = new System.Drawing.Point(28, 418);
+            class_1_MidtermLabel.Location = new System.Drawing.Point(10, 175);
+            class_1_MidtermLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             class_1_MidtermLabel.Name = "class_1_MidtermLabel";
-            class_1_MidtermLabel.Size = new System.Drawing.Size(226, 32);
+            class_1_MidtermLabel.Size = new System.Drawing.Size(84, 13);
             class_1_MidtermLabel.TabIndex = 10;
             class_1_MidtermLabel.Text = "Class 1 Midterm:";
             // 
             // class_2_MidtermLabel
             // 
             class_2_MidtermLabel.AutoSize = true;
-            class_2_MidtermLabel.Location = new System.Drawing.Point(28, 494);
+            class_2_MidtermLabel.Location = new System.Drawing.Point(10, 207);
+            class_2_MidtermLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             class_2_MidtermLabel.Name = "class_2_MidtermLabel";
-            class_2_MidtermLabel.Size = new System.Drawing.Size(226, 32);
+            class_2_MidtermLabel.Size = new System.Drawing.Size(84, 13);
             class_2_MidtermLabel.TabIndex = 12;
             class_2_MidtermLabel.Text = "Class 2 Midterm:";
             // 
             // class_3_MidtermLabel
             // 
             class_3_MidtermLabel.AutoSize = true;
-            class_3_MidtermLabel.Location = new System.Drawing.Point(28, 570);
+            class_3_MidtermLabel.Location = new System.Drawing.Point(10, 239);
+            class_3_MidtermLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             class_3_MidtermLabel.Name = "class_3_MidtermLabel";
-            class_3_MidtermLabel.Size = new System.Drawing.Size(226, 32);
+            class_3_MidtermLabel.Size = new System.Drawing.Size(84, 13);
             class_3_MidtermLabel.TabIndex = 14;
             class_3_MidtermLabel.Text = "Class 3 Midterm:";
             // 
             // class_4_MidtermLabel
             // 
             class_4_MidtermLabel.AutoSize = true;
-            class_4_MidtermLabel.Location = new System.Drawing.Point(28, 646);
+            class_4_MidtermLabel.Location = new System.Drawing.Point(10, 271);
+            class_4_MidtermLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             class_4_MidtermLabel.Name = "class_4_MidtermLabel";
-            class_4_MidtermLabel.Size = new System.Drawing.Size(226, 32);
+            class_4_MidtermLabel.Size = new System.Drawing.Size(84, 13);
             class_4_MidtermLabel.TabIndex = 16;
             class_4_MidtermLabel.Text = "Class 4 Midterm:";
             // 
             // class_1_FinalsLabel
             // 
             class_1_FinalsLabel.AutoSize = true;
-            class_1_FinalsLabel.Location = new System.Drawing.Point(28, 722);
+            class_1_FinalsLabel.Location = new System.Drawing.Point(10, 303);
+            class_1_FinalsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             class_1_FinalsLabel.Name = "class_1_FinalsLabel";
-            class_1_FinalsLabel.Size = new System.Drawing.Size(201, 32);
+            class_1_FinalsLabel.Size = new System.Drawing.Size(74, 13);
             class_1_FinalsLabel.TabIndex = 18;
             class_1_FinalsLabel.Text = "Class 1 Finals:";
             // 
             // class_2_FinalsLabel
             // 
             class_2_FinalsLabel.AutoSize = true;
-            class_2_FinalsLabel.Location = new System.Drawing.Point(28, 798);
+            class_2_FinalsLabel.Location = new System.Drawing.Point(10, 335);
+            class_2_FinalsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             class_2_FinalsLabel.Name = "class_2_FinalsLabel";
-            class_2_FinalsLabel.Size = new System.Drawing.Size(201, 32);
+            class_2_FinalsLabel.Size = new System.Drawing.Size(74, 13);
             class_2_FinalsLabel.TabIndex = 20;
             class_2_FinalsLabel.Text = "Class 2 Finals:";
             // 
             // class_3_FinalsLabel
             // 
             class_3_FinalsLabel.AutoSize = true;
-            class_3_FinalsLabel.Location = new System.Drawing.Point(28, 874);
+            class_3_FinalsLabel.Location = new System.Drawing.Point(10, 367);
+            class_3_FinalsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             class_3_FinalsLabel.Name = "class_3_FinalsLabel";
-            class_3_FinalsLabel.Size = new System.Drawing.Size(201, 32);
+            class_3_FinalsLabel.Size = new System.Drawing.Size(74, 13);
             class_3_FinalsLabel.TabIndex = 22;
             class_3_FinalsLabel.Text = "Class 3 Finals:";
             // 
             // class_4_FinalsLabel
             // 
             class_4_FinalsLabel.AutoSize = true;
-            class_4_FinalsLabel.Location = new System.Drawing.Point(28, 950);
+            class_4_FinalsLabel.Location = new System.Drawing.Point(10, 398);
+            class_4_FinalsLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             class_4_FinalsLabel.Name = "class_4_FinalsLabel";
-            class_4_FinalsLabel.Size = new System.Drawing.Size(201, 32);
+            class_4_FinalsLabel.Size = new System.Drawing.Size(74, 13);
             class_4_FinalsLabel.TabIndex = 24;
             class_4_FinalsLabel.Text = "Class 4 Finals:";
             // 
             // gPALabel
             // 
             gPALabel.AutoSize = true;
-            gPALabel.Location = new System.Drawing.Point(28, 1026);
+            gPALabel.Location = new System.Drawing.Point(10, 430);
+            gPALabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             gPALabel.Name = "gPALabel";
-            gPALabel.Size = new System.Drawing.Size(83, 32);
+            gPALabel.Size = new System.Drawing.Size(32, 13);
             gPALabel.TabIndex = 26;
             gPALabel.Text = "GPA:";
             // 
@@ -225,114 +238,128 @@
             // school_IDTextBox
             // 
             this.school_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "School ID", true));
-            this.school_IDTextBox.Location = new System.Drawing.Point(296, 114);
+            this.school_IDTextBox.Location = new System.Drawing.Point(111, 48);
+            this.school_IDTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.school_IDTextBox.Name = "school_IDTextBox";
-            this.school_IDTextBox.Size = new System.Drawing.Size(216, 38);
+            this.school_IDTextBox.Size = new System.Drawing.Size(84, 20);
             this.school_IDTextBox.TabIndex = 3;
             this.school_IDTextBox.TextChanged += new System.EventHandler(this.school_IDTextBox_TextChanged);
             // 
             // first_NameTextBox
             // 
             this.first_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "first_Name", true));
-            this.first_NameTextBox.Location = new System.Drawing.Point(296, 190);
+            this.first_NameTextBox.Location = new System.Drawing.Point(111, 80);
+            this.first_NameTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.first_NameTextBox.Name = "first_NameTextBox";
-            this.first_NameTextBox.Size = new System.Drawing.Size(216, 38);
+            this.first_NameTextBox.Size = new System.Drawing.Size(84, 20);
             this.first_NameTextBox.TabIndex = 5;
             // 
             // last_NameTextBox
             // 
             this.last_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "last_Name", true));
-            this.last_NameTextBox.Location = new System.Drawing.Point(296, 266);
+            this.last_NameTextBox.Location = new System.Drawing.Point(111, 112);
+            this.last_NameTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.last_NameTextBox.Name = "last_NameTextBox";
-            this.last_NameTextBox.Size = new System.Drawing.Size(216, 38);
+            this.last_NameTextBox.Size = new System.Drawing.Size(84, 20);
             this.last_NameTextBox.TabIndex = 7;
             // 
             // course_TakenTextBox
             // 
             this.course_TakenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Course Taken", true));
-            this.course_TakenTextBox.Location = new System.Drawing.Point(296, 342);
+            this.course_TakenTextBox.Location = new System.Drawing.Point(111, 143);
+            this.course_TakenTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.course_TakenTextBox.Name = "course_TakenTextBox";
-            this.course_TakenTextBox.Size = new System.Drawing.Size(216, 38);
+            this.course_TakenTextBox.Size = new System.Drawing.Size(84, 20);
             this.course_TakenTextBox.TabIndex = 9;
             // 
             // class_1_MidtermTextBox
             // 
             this.class_1_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 1 Midterm", true));
-            this.class_1_MidtermTextBox.Location = new System.Drawing.Point(296, 418);
+            this.class_1_MidtermTextBox.Location = new System.Drawing.Point(111, 175);
+            this.class_1_MidtermTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.class_1_MidtermTextBox.Name = "class_1_MidtermTextBox";
-            this.class_1_MidtermTextBox.Size = new System.Drawing.Size(216, 38);
+            this.class_1_MidtermTextBox.Size = new System.Drawing.Size(84, 20);
             this.class_1_MidtermTextBox.TabIndex = 11;
             // 
             // class_2_MidtermTextBox
             // 
             this.class_2_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 2 Midterm", true));
-            this.class_2_MidtermTextBox.Location = new System.Drawing.Point(296, 494);
+            this.class_2_MidtermTextBox.Location = new System.Drawing.Point(111, 207);
+            this.class_2_MidtermTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.class_2_MidtermTextBox.Name = "class_2_MidtermTextBox";
-            this.class_2_MidtermTextBox.Size = new System.Drawing.Size(216, 38);
+            this.class_2_MidtermTextBox.Size = new System.Drawing.Size(84, 20);
             this.class_2_MidtermTextBox.TabIndex = 13;
             // 
             // class_3_MidtermTextBox
             // 
             this.class_3_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 3 Midterm", true));
-            this.class_3_MidtermTextBox.Location = new System.Drawing.Point(296, 570);
+            this.class_3_MidtermTextBox.Location = new System.Drawing.Point(111, 239);
+            this.class_3_MidtermTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.class_3_MidtermTextBox.Name = "class_3_MidtermTextBox";
-            this.class_3_MidtermTextBox.Size = new System.Drawing.Size(216, 38);
+            this.class_3_MidtermTextBox.Size = new System.Drawing.Size(84, 20);
             this.class_3_MidtermTextBox.TabIndex = 15;
             // 
             // class_4_MidtermTextBox
             // 
             this.class_4_MidtermTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 4 Midterm", true));
-            this.class_4_MidtermTextBox.Location = new System.Drawing.Point(296, 646);
+            this.class_4_MidtermTextBox.Location = new System.Drawing.Point(111, 271);
+            this.class_4_MidtermTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.class_4_MidtermTextBox.Name = "class_4_MidtermTextBox";
-            this.class_4_MidtermTextBox.Size = new System.Drawing.Size(216, 38);
+            this.class_4_MidtermTextBox.Size = new System.Drawing.Size(84, 20);
             this.class_4_MidtermTextBox.TabIndex = 17;
             // 
             // class_1_FinalsTextBox
             // 
             this.class_1_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 1 Finals", true));
-            this.class_1_FinalsTextBox.Location = new System.Drawing.Point(296, 722);
+            this.class_1_FinalsTextBox.Location = new System.Drawing.Point(111, 303);
+            this.class_1_FinalsTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.class_1_FinalsTextBox.Name = "class_1_FinalsTextBox";
-            this.class_1_FinalsTextBox.Size = new System.Drawing.Size(216, 38);
+            this.class_1_FinalsTextBox.Size = new System.Drawing.Size(84, 20);
             this.class_1_FinalsTextBox.TabIndex = 19;
             // 
             // class_2_FinalsTextBox
             // 
             this.class_2_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 2 Finals", true));
-            this.class_2_FinalsTextBox.Location = new System.Drawing.Point(296, 798);
+            this.class_2_FinalsTextBox.Location = new System.Drawing.Point(111, 335);
+            this.class_2_FinalsTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.class_2_FinalsTextBox.Name = "class_2_FinalsTextBox";
-            this.class_2_FinalsTextBox.Size = new System.Drawing.Size(216, 38);
+            this.class_2_FinalsTextBox.Size = new System.Drawing.Size(84, 20);
             this.class_2_FinalsTextBox.TabIndex = 21;
             // 
             // class_3_FinalsTextBox
             // 
             this.class_3_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 3 Finals", true));
-            this.class_3_FinalsTextBox.Location = new System.Drawing.Point(296, 874);
+            this.class_3_FinalsTextBox.Location = new System.Drawing.Point(111, 367);
+            this.class_3_FinalsTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.class_3_FinalsTextBox.Name = "class_3_FinalsTextBox";
-            this.class_3_FinalsTextBox.Size = new System.Drawing.Size(216, 38);
+            this.class_3_FinalsTextBox.Size = new System.Drawing.Size(84, 20);
             this.class_3_FinalsTextBox.TabIndex = 23;
             // 
             // class_4_FinalsTextBox
             // 
             this.class_4_FinalsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "Class 4 Finals", true));
-            this.class_4_FinalsTextBox.Location = new System.Drawing.Point(296, 950);
+            this.class_4_FinalsTextBox.Location = new System.Drawing.Point(111, 398);
+            this.class_4_FinalsTextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.class_4_FinalsTextBox.Name = "class_4_FinalsTextBox";
-            this.class_4_FinalsTextBox.Size = new System.Drawing.Size(216, 38);
+            this.class_4_FinalsTextBox.Size = new System.Drawing.Size(84, 20);
             this.class_4_FinalsTextBox.TabIndex = 25;
             // 
             // gPATextBox
             // 
             this.gPATextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "GPA", true));
-            this.gPATextBox.Location = new System.Drawing.Point(296, 1026);
+            this.gPATextBox.Location = new System.Drawing.Point(111, 430);
+            this.gPATextBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.gPATextBox.Name = "gPATextBox";
-            this.gPATextBox.Size = new System.Drawing.Size(216, 38);
+            this.gPATextBox.Size = new System.Drawing.Size(84, 20);
             this.gPATextBox.TabIndex = 27;
             this.gPATextBox.TextChanged += new System.EventHandler(this.gPATextBox_TextChanged);
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(296, 1116);
+            this.AddButton.Location = new System.Drawing.Point(111, 468);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(216, 58);
+            this.AddButton.Size = new System.Drawing.Size(81, 24);
             this.AddButton.TabIndex = 28;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -340,9 +367,10 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(296, 1195);
+            this.SaveButton.Location = new System.Drawing.Point(111, 501);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(216, 58);
+            this.SaveButton.Size = new System.Drawing.Size(81, 24);
             this.SaveButton.TabIndex = 29;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -350,9 +378,10 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(296, 1274);
+            this.DeleteButton.Location = new System.Drawing.Point(111, 534);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(216, 58);
+            this.DeleteButton.Size = new System.Drawing.Size(81, 24);
             this.DeleteButton.TabIndex = 30;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -371,9 +400,10 @@
             // 
             // LogoutButton
             // 
-            this.LogoutButton.Location = new System.Drawing.Point(296, 1353);
+            this.LogoutButton.Location = new System.Drawing.Point(111, 567);
+            this.LogoutButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(216, 58);
+            this.LogoutButton.Size = new System.Drawing.Size(81, 24);
             this.LogoutButton.TabIndex = 31;
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = true;
@@ -381,7 +411,12 @@
             // 
             // studentInformationDataGridView
             // 
+            this.studentInformationDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.studentInformationDataGridView.AutoGenerateColumns = false;
+            this.studentInformationDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.studentInformationDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.studentInformationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.studentInformationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -398,11 +433,12 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.studentInformationDataGridView.DataSource = this.studentInformationBindingSource;
-            this.studentInformationDataGridView.Location = new System.Drawing.Point(579, 114);
+            this.studentInformationDataGridView.Location = new System.Drawing.Point(217, 48);
+            this.studentInformationDataGridView.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.studentInformationDataGridView.Name = "studentInformationDataGridView";
             this.studentInformationDataGridView.RowHeadersWidth = 102;
             this.studentInformationDataGridView.RowTemplate.Height = 40;
-            this.studentInformationDataGridView.Size = new System.Drawing.Size(1697, 1297);
+            this.studentInformationDataGridView.Size = new System.Drawing.Size(636, 544);
             this.studentInformationDataGridView.TabIndex = 31;
             // 
             // dataGridViewTextBoxColumn1
@@ -411,7 +447,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "School ID";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 250;
+            this.dataGridViewTextBoxColumn1.Width = 73;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -419,7 +455,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "first_Name";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 250;
+            this.dataGridViewTextBoxColumn2.Width = 82;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -427,7 +463,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "last_Name";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 250;
+            this.dataGridViewTextBoxColumn3.Width = 82;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -435,7 +471,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Course Taken";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 250;
+            this.dataGridViewTextBoxColumn4.Width = 91;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -443,7 +479,7 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Class 1 Midterm";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 250;
+            this.dataGridViewTextBoxColumn5.Width = 97;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -451,7 +487,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Class 2 Midterm";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 250;
+            this.dataGridViewTextBoxColumn6.Width = 97;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -459,7 +495,7 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Class 3 Midterm";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 250;
+            this.dataGridViewTextBoxColumn7.Width = 97;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -467,7 +503,7 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Class 4 Midterm";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 250;
+            this.dataGridViewTextBoxColumn8.Width = 97;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -475,7 +511,7 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Class 1 Finals";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 250;
+            this.dataGridViewTextBoxColumn9.Width = 64;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -483,7 +519,7 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Class 2 Finals";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 250;
+            this.dataGridViewTextBoxColumn10.Width = 64;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -491,7 +527,7 @@
             this.dataGridViewTextBoxColumn11.HeaderText = "Class 3 Finals";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 250;
+            this.dataGridViewTextBoxColumn11.Width = 64;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -499,7 +535,7 @@
             this.dataGridViewTextBoxColumn12.HeaderText = "Class 4 Finals";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 250;
+            this.dataGridViewTextBoxColumn12.Width = 64;
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -507,13 +543,13 @@
             this.dataGridViewTextBoxColumn13.HeaderText = "GPA";
             this.dataGridViewTextBoxColumn13.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 250;
+            this.dataGridViewTextBoxColumn13.Width = 54;
             // 
             // AdminViewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2345, 1458);
+            this.ClientSize = new System.Drawing.Size(879, 611);
             this.Controls.Add(this.studentInformationDataGridView);
             this.Controls.Add(this.LogoutButton);
             this.Controls.Add(this.DeleteButton);
@@ -545,6 +581,7 @@
             this.Controls.Add(this.class_4_FinalsTextBox);
             this.Controls.Add(gPALabel);
             this.Controls.Add(this.gPATextBox);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "AdminViewForm";
             this.Text = "Blackboard 3.0 Admin View";
             this.Load += new System.EventHandler(this.Form1_Load);

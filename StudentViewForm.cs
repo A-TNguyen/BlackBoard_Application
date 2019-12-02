@@ -34,7 +34,8 @@ namespace Blackboard_Application
             // TODO: This line of code loads data into the 'studentInfoDataSet.StudentInformation' table. You can move, or remove it, as needed.
             //this.studentInformationTableAdapter.Fill(this.studentInfoDataSet.StudentInformation);
             //Create SQL Source connection where your DB is locate
-            String source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
+            //String source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
+            String source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
             SqlConnection con = new SqlConnection(source); //SQL connection
             con.Open();
             //SQL query statement to select all information from studentinformation table where username is equal to the passing input from Login Form input
