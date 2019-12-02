@@ -13,7 +13,8 @@ namespace Blackboard_Application
 {
     public partial class LoginForm : Form
     {
-        public static string passingText;
+        //Create a string the name passingUsername 
+        public static string passingUsername;
         public LoginForm()
         {
             
@@ -33,7 +34,8 @@ namespace Blackboard_Application
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            passingText = loginInput.Text;
+            //We set the username input you type and set it to passingUsername
+            passingUsername = loginInput.Text;
             //If statement where String Input Cannot be null or empty
             if(!string.IsNullOrEmpty(loginInput.Text) &&
             !string.IsNullOrEmpty(passwordInput.Text))

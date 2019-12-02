@@ -43,6 +43,8 @@
             System.Windows.Forms.Label class_4_FinalsLabel;
             System.Windows.Forms.Label gPALabel;
             this.school_IDTextBox = new System.Windows.Forms.TextBox();
+            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentInfoDataSet = new Blackboard_Application.StudentInfoDataSet();
             this.first_NameTextBox = new System.Windows.Forms.TextBox();
             this.last_NameTextBox = new System.Windows.Forms.TextBox();
             this.course_TakenTextBox = new System.Windows.Forms.TextBox();
@@ -56,11 +58,8 @@
             this.class_4_FinalsTextBox = new System.Windows.Forms.TextBox();
             this.gPATextBox = new System.Windows.Forms.TextBox();
             this.logoutButton = new System.Windows.Forms.Button();
-            this.studentInformationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentInfoDataSet = new Blackboard_Application.StudentInfoDataSet();
             this.studentInformationTableAdapter = new Blackboard_Application.StudentInfoDataSetTableAdapters.StudentInformationTableAdapter();
             this.tableAdapterManager = new Blackboard_Application.StudentInfoDataSetTableAdapters.TableAdapterManager();
-            this.afterloginbox = new System.Windows.Forms.TextBox();
             school_IDLabel = new System.Windows.Forms.Label();
             first_NameLabel = new System.Windows.Forms.Label();
             last_NameLabel = new System.Windows.Forms.Label();
@@ -219,6 +218,16 @@
             this.school_IDTextBox.TabIndex = 2;
             this.school_IDTextBox.TextChanged += new System.EventHandler(this.school_IDTextBox_TextChanged);
             // 
+            // studentInformationBindingSource
+            // 
+            this.studentInformationBindingSource.DataMember = "StudentInformation";
+            this.studentInformationBindingSource.DataSource = this.studentInfoDataSet;
+            // 
+            // studentInfoDataSet
+            // 
+            this.studentInfoDataSet.DataSetName = "StudentInfoDataSet";
+            this.studentInfoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // first_NameTextBox
             // 
             this.first_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentInformationBindingSource, "first_Name", true));
@@ -350,16 +359,6 @@
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
-            // studentInformationBindingSource
-            // 
-            this.studentInformationBindingSource.DataMember = "StudentInformation";
-            this.studentInformationBindingSource.DataSource = this.studentInfoDataSet;
-            // 
-            // studentInfoDataSet
-            // 
-            this.studentInfoDataSet.DataSetName = "StudentInfoDataSet";
-            this.studentInfoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // studentInformationTableAdapter
             // 
             this.studentInformationTableAdapter.ClearBeforeFill = true;
@@ -371,20 +370,11 @@
             this.tableAdapterManager.UpdateOrder = Blackboard_Application.StudentInfoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = null;
             // 
-            // afterloginbox
-            // 
-            this.afterloginbox.Location = new System.Drawing.Point(76, 1028);
-            this.afterloginbox.Name = "afterloginbox";
-            this.afterloginbox.Size = new System.Drawing.Size(364, 38);
-            this.afterloginbox.TabIndex = 28;
-            this.afterloginbox.TextChanged += new System.EventHandler(this.afterloginbox_TextChanged);
-            // 
             // StudentViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 1183);
-            this.Controls.Add(this.afterloginbox);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(school_IDLabel);
             this.Controls.Add(this.school_IDTextBox);
@@ -442,6 +432,5 @@
         private System.Windows.Forms.TextBox class_4_FinalsTextBox;
         private System.Windows.Forms.TextBox gPATextBox;
         private System.Windows.Forms.Button logoutButton;
-        private System.Windows.Forms.TextBox afterloginbox;
     }
 }
