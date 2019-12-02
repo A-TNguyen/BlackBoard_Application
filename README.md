@@ -18,7 +18,9 @@ Instructions:
 Login with credentials found in SQL Server DB called StudentInfo.mdf  
 (To be able to use Local DB please make sure to path to the approriate location)  
 
-File path name with \\ EX: C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf  
+File path name:
+
+EX: C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf  
 
 Admin Roles: View, Add, Insert, Delete Student Information   
 
