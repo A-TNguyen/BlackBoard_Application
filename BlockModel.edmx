@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="StudentInfoModelEntity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="StudentInformation">
+          <Key>
+            <PropertyRef Name="School ID" />
+          </Key>
+          <Property Name="School ID" Type="int" Nullable="false" />
+          <Property Name="first_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Course Taken" Type="int" />
+          <Property Name="Class 1 Midterm" Type="varchar" MaxLength="1" />
+          <Property Name="Class 2 Midterm" Type="varchar" MaxLength="1" />
+          <Property Name="Class 3 Midterm" Type="varchar" MaxLength="1" />
+          <Property Name="Class 4 Midterm" Type="varchar" MaxLength="1" />
+          <Property Name="Class 1 Finals" Type="varchar" MaxLength="1" />
+          <Property Name="Class 2 Finals" Type="varchar" MaxLength="1" />
+          <Property Name="Class 3 Finals" Type="varchar" MaxLength="1" />
+          <Property Name="Class 4 Finals" Type="varchar" MaxLength="1" />
+          <Property Name="GPA" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="first_Name" Type="varchar" MaxLength="10" />
+          <Property Name="last_Name" Type="varchar" MaxLength="10" />
+          <Property Name="username" Type="varchar" MaxLength="10" />
+          <Property Name="password" Type="varchar" MaxLength="10" />
+          <Property Name="user_Type" Type="varchar" MaxLength="7" />
+        </EntityType>
+        <EntityContainer Name="StudentInfoModelEntityStoreContainer">
+          <EntitySet Name="StudentInformation" EntityType="Self.StudentInformation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StudentInfoModelEntity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="StudentInformation">
+          <Key>
+            <PropertyRef Name="School_ID" />
+          </Key>
+          <Property Name="School_ID" Type="Int32" Nullable="false" />
+          <Property Name="first_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Course_Taken" Type="Int32" />
+          <Property Name="Class_1_Midterm" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Class_2_Midterm" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Class_3_Midterm" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Class_4_Midterm" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Class_1_Finals" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Class_2_Finals" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Class_3_Finals" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Class_4_Finals" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="GPA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="first_Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="last_Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="user_Type" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="StudentInfoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="StudentInformations" EntityType="Self.StudentInformation" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StudentInfoModelEntityStoreContainer" CdmEntityContainer="StudentInfoEntities">
+          <EntitySetMapping Name="StudentInformations">
+            <EntityTypeMapping TypeName="StudentInfoModelEntity.StudentInformation">
+              <MappingFragment StoreEntitySet="StudentInformation">
+                <ScalarProperty Name="School_ID" ColumnName="School ID" />
+                <ScalarProperty Name="first_Name" ColumnName="first_Name" />
+                <ScalarProperty Name="last_Name" ColumnName="last_Name" />
+                <ScalarProperty Name="Course_Taken" ColumnName="Course Taken" />
+                <ScalarProperty Name="Class_1_Midterm" ColumnName="Class 1 Midterm" />
+                <ScalarProperty Name="Class_2_Midterm" ColumnName="Class 2 Midterm" />
+                <ScalarProperty Name="Class_3_Midterm" ColumnName="Class 3 Midterm" />
+                <ScalarProperty Name="Class_4_Midterm" ColumnName="Class 4 Midterm" />
+                <ScalarProperty Name="Class_1_Finals" ColumnName="Class 1 Finals" />
+                <ScalarProperty Name="Class_2_Finals" ColumnName="Class 2 Finals" />
+                <ScalarProperty Name="Class_3_Finals" ColumnName="Class 3 Finals" />
+                <ScalarProperty Name="Class_4_Finals" ColumnName="Class 4 Finals" />
+                <ScalarProperty Name="GPA" ColumnName="GPA" />
+                <ScalarProperty Name="username" ColumnName="username" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="StudentInfoModelEntity.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="first_Name" ColumnName="first_Name" />
+                <ScalarProperty Name="last_Name" ColumnName="last_Name" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="user_Type" ColumnName="user_Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
