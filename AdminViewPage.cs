@@ -15,7 +15,7 @@ namespace Blackboard_Application
 {
     public partial class AdminViewForm : Form
     {
-        private string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        private string appDirectory = AppDomain.CurrentDomain.BaseDirectory; //Create instance to get the current app directory
         public AdminViewForm()
         {
             InitializeComponent();
@@ -31,8 +31,9 @@ namespace Blackboard_Application
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string s = appDirectory;
-            // TODO: This line of code loads data into the 'studentInfoDataSet.StudentInformation' table. You can move, or remove it, as needed.
+            //This line of code to load the appDirectory
+            string s = appDirectory; 
+            //TODO: This line of code loads data into the 'studentInfoDataSet.StudentInformation' table. You can move, or remove it, as needed.
             this.studentInformationTableAdapter.Fill(this.studentInfoDataSet.StudentInformation);
 
         }
@@ -72,14 +73,11 @@ namespace Blackboard_Application
         private void LogoutButton_Click(object sender, EventArgs e)
         {
             
-            using (LoginForm login = new LoginForm())  // Initialize LoginForm to a value
+            using (var login = new LoginForm())  // Initialize LoginForm to a value
             {
                 this.Hide(); // First need to hide main page
                 login.ShowDialog(); //Enable you to go back to Login Page Form
-                //this.Close();
-                //login.Dispose();
-                //Application.Exit();
-                //this.Close(); // Make sure to close out this MainPage Window
+              
             }
         }
 

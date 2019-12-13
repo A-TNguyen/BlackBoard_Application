@@ -19,25 +19,25 @@ namespace Blackboard_Application.Connection
         //public static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
         //Where you are running your program from
         
-        public static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
+        static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
         
 
 
 
 
-        public static DataTable ExecuteSQL(string sql)
+        public static DataTable ExecuteSql(string sql)
         {
-            SqlConnection con = new SqlConnection(); //Create SQL connection
-            using (DataTable dt = new DataTable()) //Created using so it can dispose of the variable
-            {
+            var con = new SqlConnection(); //Create SQL connection
+
+            var dt = new DataTable(); 
+            
                 try
                 {
 
                     con.ConnectionString = stringConnection;
                     con.Open();
 
-                    //Create disposable pattern
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(sql, con))
+                    var adapter = new SqlDataAdapter(sql, con);
                         adapter.Fill(dt);
 
                     con.Close();
@@ -53,10 +53,11 @@ namespace Blackboard_Application.Connection
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                  
                 }
-                con.Dispose();
+
+                //con.Dispose();
 
                 return dt;
-            }
+            
         }
     }
 }

@@ -40,61 +40,53 @@ namespace Blackboard_Application
             if(!string.IsNullOrEmpty(loginInput.Text) &&
             !string.IsNullOrEmpty(passwordInput.Text))
             {
-                string mySQL = string.Empty;
+                var mySql = string.Empty;
 
                 
-                mySQL += "SELECT * FROM Users "; //To Select all attributes from the User Table
-                mySQL += "WHERE username ='"+ loginInput.Text +"' "; //Where username is the input
+                mySql += "SELECT * FROM Users "; //To Select all attributes from the User Table
+                mySql += "WHERE username ='"+ loginInput.Text +"' "; //Where username is the input
                 //mySQL += "WHERE username = 'tester' ";
-                mySQL += "AND password = '"+ passwordInput.Text +"'"; //AND the password Input 
+                mySql += "AND password = '"+ passwordInput.Text +"'"; //AND the password Input 
                                                                       //mySQL += "AND password = '1'";
 
                 //Using helps dispose of null connection
-                using (DataTable userData = SQLServerConnection.ExecuteSQL(mySQL))
-                
+                var userData = SQLServerConnection.ExecuteSql(mySql);
+                if (userData.Rows.Count > 0)
                 {
-                    if (userData.Rows.Count > 0)
-                    {
                         
-                        if (loginInput.Text == "admin")
+                        if (loginInput.Text == "admin") //Execute AdminViewPage.cs
                         {
                             loginInput.Clear();
                             passwordInput.Clear();
-                            using (AdminViewForm addPage = new AdminViewForm())// Initialize LoginForm to a value
-                            {
-                                this.Hide(); // First need to hide main page
-                                addPage.ShowDialog(); //Enable you to go back to Login Page Form
-                                //this.Close(); // Make sure to close out this MainPage Window
-                                this.loginInput.Select();
-                                
-                                //Application.Exit();
-                            }
+                            var addPage = new AdminViewForm();// Initialize LoginForm to a value
+                            this.Hide(); // First need to hide main page
+                            addPage.ShowDialog(); //Enable you to go back to Login Page Form
+                            this.loginInput.Select();
+                            
                         }
                         else
                         {
                             loginInput.Clear();
                             passwordInput.Clear();
-                            using (StudentViewForm studentPage = new StudentViewForm())  // Initialize LoginForm to a value
-                            {
-                                this.Hide(); // First need to hide main page
-                                studentPage.ShowDialog(); //Enable you to go back to Login Page Form
-                                //this.Close(); // Make sure to close out this MainPage Window
-                                this.loginInput.Select();
+                            var studentPage = new StudentViewForm(); // Initialize LoginForm to a value
+                            this.Hide(); // First need to hide main page
+                            studentPage.ShowDialog(); //Enable you to go back to Login Page Form
+                            this.loginInput.Select();
 
-                            }
+
                         }
-
-                    }
-                    else
-                    {
+                }
+                else
+                {
                         MessageBox.Show("Wrong Username or Password", "Please Try Again",
                         MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         loginInput.Focus();
                         loginInput.SelectAll();
-                    }
                 }
+                
 
             }
+
             else
             {
                 MessageBox.Show("Please enter a username and password.","Try Again", 

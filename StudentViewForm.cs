@@ -35,12 +35,12 @@ namespace Blackboard_Application
             //this.studentInformationTableAdapter.Fill(this.studentInfoDataSet.StudentInformation);
             //Create SQL Source connection where your DB is locate
             //String source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
-            String source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
-            SqlConnection con = new SqlConnection(source); //SQL connection
+            var source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
+            var con = new SqlConnection(source); //SQL connection
             con.Open();
             //SQL query statement to select all information from studentinformation table where username is equal to the passing input from Login Form input
-            String mySQL = "SELECT * FROM StudentInformation WHERE username ='" + LoginForm.passingUsername + "'";
-            SqlCommand cmd = new SqlCommand(mySQL,con);
+            var mySql = "SELECT * FROM StudentInformation WHERE username ='" + LoginForm.passingUsername + "'";
+            SqlCommand cmd = new SqlCommand(mySql,con);
             SqlDataReader dr = cmd.ExecuteReader(); //This is to read the SQL statements
             if(dr.Read()) //This if statement will pass ALL values into the textbox as a string to each one for the right username
             {
