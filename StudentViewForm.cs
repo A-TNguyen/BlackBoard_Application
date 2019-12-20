@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 using Blackboard_Application.Connection;
 
 namespace Blackboard_Application
@@ -35,32 +36,37 @@ namespace Blackboard_Application
             //this.studentInformationTableAdapter.Fill(this.studentInfoDataSet.StudentInformation);
             //Create SQL Source connection where your DB is locate
             //String source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
-            var source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
-            var con = new SqlConnection(source); //SQL connection
-            con.Open();
+            //string source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
+            var SqlClass = new SQLServerConnection();
+            //var con = new SqlConnection(source); //SQL connection
+            //con.Open();
+            SqlClass.OpenConnection();
             //SQL query statement to select all information from studentinformation table where username is equal to the passing input from Login Form input
-            var mySql = "SELECT * FROM StudentInformation WHERE username ='" + LoginForm.passingUsername + "'";
-            SqlCommand cmd = new SqlCommand(mySql,con);
-            SqlDataReader dr = cmd.ExecuteReader(); //This is to read the SQL statements
-            if(dr.Read()) //This if statement will pass ALL values into the textbox as a string to each one for the right username
+            string mySql = "SELECT * FROM StudentInformation WHERE username ='" + LoginForm.passingUsername + "'";
+            //var cmd = new SqlCommand(mySql,con);
+            //SqlClass.ExecuteQueries(mySql);
+            //SqlDataReader reader = cmd.ExecuteReader(); //This is to read the SQL statements one line at a time
+            //SqlClass.DataReader()
+            var reader = SqlClass.DataReader(mySql);
+            while (reader.Read()) //This if statement will pass ALL values into the textbox as a string to each one for the right username
             {
-                school_IDTextBox.Text = (dr["School ID"].ToString());
-                first_NameTextBox.Text = (dr["first_Name"].ToString());
-                last_NameTextBox.Text = (dr["last_Name"].ToString());
-                course_TakenTextBox.Text = (dr["Course Taken"].ToString());
-                class_1_MidtermTextBox.Text = (dr["Class 1 Midterm"].ToString());
-                class_2_MidtermTextBox.Text = (dr["Class 2 Midterm"].ToString());
-                class_3_MidtermTextBox.Text = (dr["Class 3 Midterm"].ToString());
-                class_4_MidtermTextBox.Text = (dr["Class 4 Midterm"].ToString());
-                class_1_FinalsTextBox.Text = (dr["Class 1 Finals"].ToString());
-                class_2_FinalsTextBox.Text = (dr["Class 2 Finals"].ToString());
-                class_3_FinalsTextBox.Text = (dr["Class 3 Finals"].ToString());
-                class_4_FinalsTextBox.Text = (dr["Class 4 Finals"].ToString());
+                school_IDTextBox.Text = (reader["School ID"].ToString());
+                first_NameTextBox.Text = (reader["first_Name"].ToString());
+                last_NameTextBox.Text = (reader["last_Name"].ToString());
+                course_TakenTextBox.Text = (reader["Course Taken"].ToString());
+                class_1_MidtermTextBox.Text = (reader["Class 1 Midterm"].ToString());
+                class_2_MidtermTextBox.Text = (reader["Class 2 Midterm"].ToString());
+                class_3_MidtermTextBox.Text = (reader["Class 3 Midterm"].ToString());
+                class_4_MidtermTextBox.Text = (reader["Class 4 Midterm"].ToString());
+                class_1_FinalsTextBox.Text = (reader["Class 1 Finals"].ToString());
+                class_2_FinalsTextBox.Text = (reader["Class 2 Finals"].ToString());
+                class_3_FinalsTextBox.Text = (reader["Class 3 Finals"].ToString());
+                class_4_FinalsTextBox.Text = (reader["Class 4 Finals"].ToString());
                 //statement create GPA calculation
-                gPATextBox.Text = (dr["GPA"].ToString());
+                gPATextBox.Text = (reader["GPA"].ToString());
             }
-            con.Close(); //Close connection
-            
+            //con.Close(); //Close connection
+            SqlClass.CloseConnection();
         }
 
         private void logoutButton_Click(object sender, EventArgs e)

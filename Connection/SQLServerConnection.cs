@@ -20,10 +20,28 @@ namespace Blackboard_Application.Connection
         //Where you are running your program from
         
         static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
-        
-
-
-
+        SqlConnection con;
+        public void OpenConnection()
+        { 
+            con = new SqlConnection(stringConnection);
+            con.Open();
+        }
+        public void CloseConnection()
+        { 
+            con = new SqlConnection(stringConnection);
+            con.Close();
+        }
+        public void ExecuteQueries(string query)
+        {
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.ExecuteNonQuery();
+        }
+        public SqlDataReader DataReader(string query)
+        {
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+        }
 
         public static DataTable ExecuteSql(string sql)
         {
@@ -39,7 +57,7 @@ namespace Blackboard_Application.Connection
 
                     var adapter = new SqlDataAdapter(sql, con);
                         adapter.Fill(dt);
-
+                       
                     con.Close();
                     con = null;
 
