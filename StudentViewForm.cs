@@ -32,22 +32,19 @@ namespace Blackboard_Application
 
         private void StudentViewForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'studentInfoDataSet.StudentInformation' table. You can move, or remove it, as needed.
-            //this.studentInformationTableAdapter.Fill(this.studentInfoDataSet.StudentInformation);
             //Create SQL Source connection where your DB is locate
             //String source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
-            //string source = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
-            var SqlClass = new SQLServerConnection();
-            //var con = new SqlConnection(source); //SQL connection
-            //con.Open();
-            SqlClass.OpenConnection();
+            
+            var sqlClass = new SQLServerConnection(); // This calls the class for SQL
+
+            sqlClass.OpenConnection(); // Open SQL connection
+            
             //SQL query statement to select all information from studentinformation table where username is equal to the passing input from Login Form input
             string mySql = "SELECT * FROM StudentInformation WHERE username ='" + LoginForm.passingUsername + "'";
-            //var cmd = new SqlCommand(mySql,con);
+            
             //SqlClass.ExecuteQueries(mySql);
-            //SqlDataReader reader = cmd.ExecuteReader(); //This is to read the SQL statements one line at a time
-            //SqlClass.DataReader()
-            var reader = SqlClass.DataReader(mySql);
+            
+            var reader = sqlClass.DataReader(mySql);
             while (reader.Read()) //This if statement will pass ALL values into the textbox as a string to each one for the right username
             {
                 school_IDTextBox.Text = (reader["School ID"].ToString());
@@ -65,8 +62,7 @@ namespace Blackboard_Application
                 //statement create GPA calculation
                 gPATextBox.Text = (reader["GPA"].ToString());
             }
-            //con.Close(); //Close connection
-            SqlClass.CloseConnection();
+            sqlClass.CloseConnection(); // closes the connection
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
