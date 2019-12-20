@@ -16,7 +16,6 @@ namespace Blackboard_Application.Connection
     {
         //Pleae make sure to change the AttachDBFileName
         //This is establishing the source connection where the DB is edit : Data Source = DB Path , make sure to add '\\' instead of '\' ; and Intial Catalog = *database name*
-        //public static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\Blackboard_Application\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
         //Where you are running your program from
         
         static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
