@@ -18,7 +18,10 @@ namespace Blackboard_Application.Connection
         //This is establishing the source connection where the DB is edit : Data Source = DB Path , make sure to add '\\' instead of '\' ; and Intial Catalog = *database name*
         //Where you are running your program from
         
-        static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
+         //Laptop - Main Directory
+        //static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andrew Nguyen\\Documents\\Projects\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True"; 
+        //Laptop - Home Directory
+        static string stringConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\admin\\Documents\\GitHub\\BlackBoard_Application\\StudentInfo.mdf;Integrated Security=True";
         SqlConnection con;
         public void OpenConnection()
         { 
